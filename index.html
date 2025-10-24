@@ -323,29 +323,48 @@
             margin-top: 1rem;
         }
         
-        /* Simplified Skills */
-        .skills-simple {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+        /* Projects Section - Horizontal Layout */
+        .project-item {
+            border-left: 3px solid #667eea;
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+            position: relative;
         }
         
-        .skill-category-simple {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
+        .project-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            background: #667eea;
+            border-radius: 50%;
         }
         
-        .skill-category-simple h4 {
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-tech-highlights {
             color: #667eea;
+            font-weight: 500;
             margin-bottom: 1rem;
-            font-size: 1.2rem;
         }
         
-        .skill-category-simple p {
-            color: #666;
-            line-height: 1.6;
+        .project-description {
+            margin-bottom: 1rem;
+        }
+        
+        .project-description ul {
+            margin-left: 1.5rem;
+        }
+        
+        .project-description li {
+            margin-bottom: 0.5rem;
         }
         
         /* Experience Photos */
@@ -666,25 +685,47 @@
             <!-- Skills Section -->
             <section id="skills" aria-labelledby="skills-heading">
                 <h2 id="skills-heading">Technical Skills</h2>
-                <div class="skills-simple">
-                    <div class="skill-category-simple">
+                <div class="skills-grid">
+                    <div class="skill-category">
                         <h4>Design & Simulation</h4>
-                        <p>ANSYS, Siemens NX, SolidWorks, Fusion 360, OpenFOAM, CREO, COMSOL, 3D Printing</p>
+                        <ul class="skill-list">
+                            <li>ANSYS</li>
+                            <li>Siemens NX</li>
+                            <li>SolidWorks</li>
+                            <li>Fusion 360</li>
+                            <li>OpenFOAM</li>
+                            <li>CREO</li>
+                            <li>COMSOL</li>
+                            <li>3D Printing</li>
+                        </ul>
                     </div>
                     
-                    <div class="skill-category-simple">
+                    <div class="skill-category">
                         <h4>Programming Languages</h4>
-                        <p>Python, C, C++, MATLAB, ROS2, OpenCV, Arduino</p>
+                        <ul class="skill-list">
+                            <li>Python</li>
+                            <li>C</li>
+                            <li>C++</li>
+                            <li>MATLAB</li>
+                            <li>ROS2</li>
+                            <li>OpenCV</li>
+                            <li>Arduino</li>
+                        </ul>
                     </div>
                     
-                    <div class="skill-category-simple">
-                        <h4>Robotics & AI</h4>
-                        <p>Computer Vision, Machine Learning, Deep Learning, Reinforcement Learning, SLAM, Motion Planning, State Estimation, Sensor Fusion</p>
-                    </div>
-                    
-                    <div class="skill-category-simple">
+                    <div class="skill-category">
                         <h4>Software Tools</h4>
-                        <p>ROS2, OpenCV, Arduino, Version Control (Git), Docker, RViz, MoveIt2, PyTorch, NumPy</p>
+                        <ul class="skill-list">
+                            <li>ROS2</li>
+                            <li>OpenCV</li>
+                            <li>Arduino</li>
+                            <li>Version Control (Git)</li>
+                            <li>Docker</li>
+                            <li>RViz</li>
+                            <li>MoveIt2</li>
+                            <li>PyTorch</li>
+                            <li>NumPy</li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -769,142 +810,133 @@
             <!-- Projects Section -->
             <section id="projects" aria-labelledby="projects-heading">
                 <h2 id="projects-heading">Featured Projects</h2>
-                <div class="projects-grid">
-                    <article class="project-card">
-                        <h4>Optimal Motion Planning for UR5-Based Steering Wheel Installation</h4>
-                        <div class="project-description">
-                            <p>Developed a custom C++ PRM motion planner for a UR5, constructing a collision-free roadmap in 6D C-space with radian-distance edge connections, used FLANN KD-tree nearest neighbors and Dijkstra for efficient path search. Integrated with MoveIt2 for real-time collision checking, achieving 30s planning time in cluttered automotive workcells for installing steering wheels on the vehicle.</p>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">C++</span>
-                            <span class="tech-tag">UR5</span>
-                            <span class="tech-tag">MoveIt2</span>
-                            <span class="tech-tag">Motion Planning</span>
-                        </div>
-                        <div class="project-media">
-                            <h4>Project Photos & Videos</h4>
-                            <div class="photo-gallery">
-                                <div class="photo-placeholder">
-                                    <p>UR5 Motion Planning Setup</p>
-                                    <small>Click to view full image</small>
-                                </div>
-                                <div class="photo-placeholder">
-                                    <p>Collision-free Path Visualization</p>
-                                    <small>Click to view full image</small>
-                                </div>
-                                <div class="video-placeholder">
-                                    <p>Steering Wheel Installation Demo</p>
-                                    <small>Click to play video</small>
-                                </div>
+                
+                <div class="project-item">
+                    <div class="project-title">Optimal Motion Planning for UR5-Based Steering Wheel Installation</div>
+                    <div class="project-tech-highlights">
+                        <strong>Technologies:</strong> C++, UR5, MoveIt2, Motion Planning, FLANN KD-tree, Dijkstra
+                    </div>
+                    <div class="project-description">
+                        <ul>
+                            <li>Developed a custom C++ PRM motion planner for a UR5, constructing a collision-free roadmap in 6D C-space with radian-distance edge connections</li>
+                            <li>Used FLANN KD-tree nearest neighbors and Dijkstra for efficient path search</li>
+                            <li>Integrated with MoveIt2 for real-time collision checking, achieving 30s planning time in cluttered automotive workcells</li>
+                            <li>Successfully implemented steering wheel installation automation on the vehicle</li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <h4>Project Photos & Videos</h4>
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder">
+                                <p>UR5 Motion Planning Setup</p>
+                                <small>Click to view full image</small>
+                            </div>
+                            <div class="photo-placeholder">
+                                <p>Collision-free Path Visualization</p>
+                                <small>Click to view full image</small>
+                            </div>
+                            <div class="video-placeholder">
+                                <p>Steering Wheel Installation Demo</p>
+                                <small>Click to play video</small>
                             </div>
                         </div>
-                        <!-- <div class="project-links">
-                            <a href="#" aria-label="View Motion Planning project details">Project Details</a>
-                            <a href="#" aria-label="View Motion Planning source code">GitHub</a>
-                        </div> -->
-                    </article>
-                    
-                    <article class="project-card">
-                        <h4>Jackal Mobile Robot State Estimation</h4>
-                        <div class="project-description">
-                            <p>Developed Extended Kalman Filter for 6-DOF robot localization by implementing nonlinear system dynamics and measurement models, fusing GPS/IMU sensor data to achieve 0.5 meter positioning accuracy on uneven terrain with slopes up to 30 degrees. Implemented real-time sensor fusion algorithm integrating geodetic coordinate transformations and adaptive noise covariance matrices.</p>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Extended Kalman Filter</span>
-                            <span class="tech-tag">GPS/IMU</span>
-                            <span class="tech-tag">Sensor Fusion</span>
-                            <span class="tech-tag">ROS2</span>
-                        </div>
-                        <div class="project-media">
-                            <h4>Project Photos & Videos</h4>
-                            <div class="photo-gallery">
-                                <div class="photo-placeholder">
-                                    <p>Jackal Mobile Robot</p>
-                                    <small>Click to view full image</small>
-                                </div>
-                                <div class="photo-placeholder">
-                                    <p>GPS/IMU Sensor Integration</p>
-                                    <small>Click to view full image</small>
-                                </div>
-                                <div class="video-placeholder">
-                                    <p>Autonomous Navigation Demo</p>
-                                    <small>Click to play video</small>
-                                </div>
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-title">Jackal Mobile Robot State Estimation</div>
+                    <div class="project-tech-highlights">
+                        <strong>Technologies:</strong> Extended Kalman Filter, GPS/IMU, Sensor Fusion, ROS2, Geodetic Transformations
+                    </div>
+                    <div class="project-description">
+                        <ul>
+                            <li>Developed Extended Kalman Filter for 6-DOF robot localization by implementing nonlinear system dynamics and measurement models</li>
+                            <li>Fused GPS/IMU sensor data to achieve 0.5 meter positioning accuracy on uneven terrain with slopes up to 30 degrees</li>
+                            <li>Implemented real-time sensor fusion algorithm integrating geodetic coordinate transformations and adaptive noise covariance matrices</li>
+                            <li>Reduced position drift from 5m to 0.3m over trajectories while maintaining 10Hz update rate for autonomous navigation</li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <h4>Project Photos & Videos</h4>
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder">
+                                <p>Jackal Mobile Robot</p>
+                                <small>Click to view full image</small>
+                            </div>
+                            <div class="photo-placeholder">
+                                <p>GPS/IMU Sensor Integration</p>
+                                <small>Click to view full image</small>
+                            </div>
+                            <div class="video-placeholder">
+                                <p>Autonomous Navigation Demo</p>
+                                <small>Click to play video</small>
                             </div>
                         </div>
-                        <!-- <div class="project-links">
-                            <a href="#" aria-label="View State Estimation project details">Project Details</a>
-                            <a href="#" aria-label="View State Estimation source code">GitHub</a>
-                        </div> -->
-                    </article>
-                    
-                    <article class="project-card">
-                        <h4>Manipulation of UR5 Robotic Arm</h4>
-                        <div class="project-description">
-                            <p>Programmed a UR5 to execute a "place-and-draw" skill, teaching start/end waypoints and drew two 5 cm parallel lines with 10 cm spacing. Designed the pipeline to be rotation-invariant with respect to the initial point orientation. Implemented and compared three MATLAB controllers—analytical IK (DH + Paden–Kahan with optimal selection among 8 solutions), Resolved-Rate, and Jacobian Transpose.</p>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">UR5</span>
-                            <span class="tech-tag">MATLAB</span>
-                            <span class="tech-tag">Inverse Kinematics</span>
-                            <span class="tech-tag">Manipulation</span>
-                        </div>
-                        <div class="project-media">
-                            <h4>Project Photos & Videos</h4>
-                            <div class="photo-gallery">
-                                <div class="photo-placeholder">
-                                    <p>UR5 Robotic Arm Setup</p>
-                                    <small>Click to view full image</small>
-                                </div>
-                                <div class="photo-placeholder">
-                                    <p>Place-and-Draw Trajectory</p>
-                                    <small>Click to view full image</small>
-                                </div>
-                                <div class="video-placeholder">
-                                    <p>Controller Comparison Demo</p>
-                                    <small>Click to play video</small>
-                                </div>
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-title">Manipulation of UR5 Robotic Arm</div>
+                    <div class="project-tech-highlights">
+                        <strong>Technologies:</strong> UR5, MATLAB, Inverse Kinematics, Analytical IK, Resolved-Rate, Jacobian Transpose
+                    </div>
+                    <div class="project-description">
+                        <ul>
+                            <li>Programmed a UR5 to execute a "place-and-draw" skill, teaching start/end waypoints and drew two 5 cm parallel lines with 10 cm spacing</li>
+                            <li>Designed the pipeline to be rotation-invariant with respect to the initial point orientation</li>
+                            <li>Implemented and compared three MATLAB controllers—analytical IK (DH + Paden–Kahan with optimal selection among 8 solutions), Resolved-Rate, and Jacobian Transpose</li>
+                            <li>Incorporated manipulability-based singularity avoidance and tuning K and Δ𝑡 for stable, accurate trajectory tracking</li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <h4>Project Photos & Videos</h4>
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder">
+                                <p>UR5 Robotic Arm Setup</p>
+                                <small>Click to view full image</small>
+                            </div>
+                            <div class="photo-placeholder">
+                                <p>Place-and-Draw Trajectory</p>
+                                <small>Click to view full image</small>
+                            </div>
+                            <div class="video-placeholder">
+                                <p>Controller Comparison Demo</p>
+                                <small>Click to play video</small>
                             </div>
                         </div>
-                        <!-- <div class="project-links">
-                            <a href="#" aria-label="View UR5 Manipulation project details">Project Details</a>
-                            <a href="#" aria-label="View UR5 Manipulation source code">GitHub</a>
-                        </div> -->
-                    </article>
-                    
-                    <article class="project-card">
-                        <h4>Semantic SLAM - Detecting Objects in 3D Map</h4>
-                        <div class="project-description">
-                            <p>Built a perception pipeline for monocular mapping in 3D with semantic labeling, combining ORB-SLAM3 with ROS for mapping and YOLOv7 for object detection across a custom dataset of over 1,000 images and depth estimation. Developed a program for camera calibration to extract the intrinsics of the camera using OpenCV and a python script to stream raw image inputs from Raspberry Pi 4 to ROS bag files.</p>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">ORB-SLAM3</span>
-                            <span class="tech-tag">YOLOv7</span>
-                            <span class="tech-tag">OpenCV</span>
-                            <span class="tech-tag">ROS</span>
-                        </div>
-                        <div class="project-media">
-                            <h4>Project Photos & Videos</h4>
-                            <div class="photo-gallery">
-                                <div class="photo-placeholder">
-                                    <p>Camera Calibration Setup</p>
-                                    <small>Click to view full image</small>
-                                </div>
-                                <div class="photo-placeholder">
-                                    <p>3D Semantic Map Visualization</p>
-                                    <small>Click to view full image</small>
-                                </div>
-                                <div class="video-placeholder">
-                                    <p>Object Detection Demo</p>
-                                    <small>Click to play video</small>
-                                </div>
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-title">Semantic SLAM - Detecting Objects in 3D Map</div>
+                    <div class="project-tech-highlights">
+                        <strong>Technologies:</strong> ORB-SLAM3, YOLOv7, OpenCV, ROS, Raspberry Pi 4, Camera Calibration
+                    </div>
+                    <div class="project-description">
+                        <ul>
+                            <li>Built a perception pipeline for monocular mapping in 3D with semantic labeling, combining ORB-SLAM3 with ROS for mapping</li>
+                            <li>Integrated YOLOv7 for object detection across a custom dataset of over 1,000 images and depth estimation</li>
+                            <li>Developed a program for camera calibration to extract the intrinsics of the camera using OpenCV</li>
+                            <li>Created a python script to stream raw image inputs from Raspberry Pi 4 to ROS bag files for consistent input for testing and analysis</li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <h4>Project Photos & Videos</h4>
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder">
+                                <p>Camera Calibration Setup</p>
+                                <small>Click to view full image</small>
+                            </div>
+                            <div class="photo-placeholder">
+                                <p>3D Semantic Map Visualization</p>
+                                <small>Click to view full image</small>
+                            </div>
+                            <div class="video-placeholder">
+                                <p>Object Detection Demo</p>
+                                <small>Click to play video</small>
                             </div>
                         </div>
-                        <!-- <div class="project-links">
-                            <a href="#" aria-label="View Semantic SLAM project details">Project Details</a>
-                            <a href="#" aria-label="View Semantic SLAM source code">GitHub</a>
-                        </div> -->
-                    </article>
+                    </div>
                 </div>
             </section>
             
