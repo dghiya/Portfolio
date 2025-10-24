@@ -289,10 +289,130 @@
             color: white;
         }
         
+        /* Education Section */
+        .education-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .education-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .education-item h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .institution {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .duration, .advisor, .gpa {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        
+        .coursework {
+            margin-top: 1rem;
+        }
+        
+        /* Simplified Skills */
+        .skills-simple {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .skill-category-simple {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .skill-category-simple h4 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .skill-category-simple p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Experience Photos */
+        .experience-photos {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .experience-photos h4 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        /* Project Media */
+        .project-media {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .project-media h4 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        /* Photo Gallery */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+        
+        .photo-placeholder, .video-placeholder {
+            background: #f8f9fa;
+            border: 2px dashed #667eea;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .photo-placeholder:hover, .video-placeholder:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .photo-placeholder p, .video-placeholder p {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .photo-placeholder small, .video-placeholder small {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+        
         /* Contact Section */
         .contact-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 2rem;
         }
         
@@ -516,16 +636,29 @@
                         <p>I am a passionate robotics engineer and graduate research assistant at Johns Hopkins University, specializing in medical robotics, autonomous systems, and computer vision. With a strong foundation in mechanical engineering and advanced studies in robotics, I focus on developing innovative solutions for complex robotic applications including surgical robotics, autonomous navigation, and precision positioning systems.</p>
                         
                         <p>My research experience spans from designing compliant flexure grippers for minimally invasive surgery to developing state estimation algorithms for mobile robots. I have hands-on experience with robotic arms (UR5, KUKA LBR iiwa), mobile platforms, and advanced sensor integration. I'm passionate about pushing the boundaries of what's possible in robotics through innovative design and cutting-edge algorithms.</p>
-                        
-                        <h3>Education</h3>
-                        <p><strong>Master of Science in Robotics</strong><br>
-                        Johns Hopkins University, Aug 2024 - May 2026<br>
-                        Advisor: Dr. Peter Kazanzides<br>
-                        Coursework: Reinforcement Learning, Algorithm for Sensor-based Robots, Trajectory Design for Space Systems, Machine Learning: Deep Learning, Computer Vision, Robot Sensors and Actuators</p>
-                        
-                        <p><strong>Bachelor of Technology in Mechanical Engineering</strong><br>
-                        Pandit Deendayal Energy University (PDEU), India, May 2024<br>
-                        GPA: 3.95/4.0</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Education Section -->
+            <section id="education" aria-labelledby="education-heading">
+                <h2 id="education-heading">Education</h2>
+                <div class="education-content">
+                    <div class="education-item">
+                        <h3>Master of Science in Robotics</h3>
+                        <div class="institution">Johns Hopkins University</div>
+                        <div class="duration">Aug 2024 - May 2026</div>
+                        <div class="advisor">Advisor: Dr. Peter Kazanzides</div>
+                        <div class="coursework">
+                            <strong>Coursework:</strong> Reinforcement Learning, Algorithm for Sensor-based Robots, Trajectory Design for Space Systems, Machine Learning: Deep Learning, Computer Vision, Robot Sensors and Actuators
+                        </div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <h3>Bachelor of Technology in Mechanical Engineering</h3>
+                        <div class="institution">Pandit Deendayal Energy University (PDEU), India</div>
+                        <div class="duration">May 2024</div>
+                        <div class="gpa">GPA: 3.95/4.0</div>
                     </div>
                 </div>
             </section>
@@ -533,61 +666,25 @@
             <!-- Skills Section -->
             <section id="skills" aria-labelledby="skills-heading">
                 <h2 id="skills-heading">Technical Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
+                <div class="skills-simple">
+                    <div class="skill-category-simple">
                         <h4>Design & Simulation</h4>
-                        <ul class="skill-list">
-                            <li>ANSYS</li>
-                            <li>Siemens NX</li>
-                            <li>SolidWorks</li>
-                            <li>Fusion 360</li>
-                            <li>OpenFOAM</li>
-                            <li>CREO</li>
-                            <li>COMSOL</li>
-                            <li>3D Printing</li>
-                        </ul>
+                        <p>ANSYS, Siemens NX, SolidWorks, Fusion 360, OpenFOAM, CREO, COMSOL, 3D Printing</p>
                     </div>
                     
-                    <div class="skill-category">
+                    <div class="skill-category-simple">
                         <h4>Programming Languages</h4>
-                        <ul class="skill-list">
-                            <li>Python</li>
-                            <li>C</li>
-                            <li>C++</li>
-                            <li>MATLAB</li>
-                            <li>ROS2</li>
-                            <li>OpenCV</li>
-                            <li>Arduino</li>
-                        </ul>
+                        <p>Python, C, C++, MATLAB, ROS2, OpenCV, Arduino</p>
                     </div>
                     
-                    <div class="skill-category">
+                    <div class="skill-category-simple">
                         <h4>Robotics & AI</h4>
-                        <ul class="skill-list">
-                            <li>Computer Vision</li>
-                            <li>Machine Learning</li>
-                            <li>Deep Learning</li>
-                            <li>Reinforcement Learning</li>
-                            <li>SLAM</li>
-                            <li>Motion Planning</li>
-                            <li>State Estimation</li>
-                            <li>Sensor Fusion</li>
-                        </ul>
+                        <p>Computer Vision, Machine Learning, Deep Learning, Reinforcement Learning, SLAM, Motion Planning, State Estimation, Sensor Fusion</p>
                     </div>
                     
-                    <div class="skill-category">
+                    <div class="skill-category-simple">
                         <h4>Software Tools</h4>
-                        <ul class="skill-list">
-                            <li>ROS2</li>
-                            <li>OpenCV</li>
-                            <li>Arduino</li>
-                            <li>Version Control (Git)</li>
-                            <li>Docker</li>
-                            <li>RViz</li>
-                            <li>MoveIt2</li>
-                            <li>PyTorch</li>
-                            <li>NumPy</li>
-                        </ul>
+                        <p>ROS2, OpenCV, Arduino, Version Control (Git), Docker, RViz, MoveIt2, PyTorch, NumPy</p>
                     </div>
                 </div>
             </section>
@@ -609,6 +706,27 @@
                             <li>Developing modular, image-guided workflow elements: interchangeable collimator patterns for localized irradiation and mechanical interfaces</li>
                         </ul>
                     </div>
+                    <div class="experience-photos">
+                            <h4>Project Photos & Videos</h4>
+                            <div class="photo-gallery">
+                                <div class="photo-placeholder">
+                                    <p>Dual-arm robotic positioning setup</p>
+                                    <small>Click to view full image</small>
+                                </div>
+                                <div class="photo-placeholder">
+                                    <p>3D-printed PLA collimators</p>
+                                    <small>Click to view full image</small>
+                                </div>
+                                <div class="photo-placeholder">
+                                    <p>Keyence 3D profiler calibration</p>
+                                    <small>Click to view full image</small>
+                                </div>
+                                <div class="video-placeholder">
+                                    <p>System demonstration video</p>
+                                    <small>Click to play video</small>
+                                </div>
+                            </div>
+                        </div>
                 </div>
                 
                 <div class="experience-item">
@@ -623,6 +741,27 @@
                             <li>Used PLA-based compliant mechanics, validated on tissue-mimicking phantoms</li>
                             <li>Gained hands-on experience with robotic arm programming and safety systems</li>
                         </ul>
+                    </div>
+                    <div class="experience-photos">
+                        <h4>Project Photos & Videos</h4>
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder">
+                                <p>KUKA LBR iiwa setup</p>
+                                <small>Click to view full image</small>
+                            </div>
+                            <div class="photo-placeholder">
+                                <p>Compliant flexure gripper</p>
+                                <small>Click to view full image</small>
+                            </div>
+                            <div class="photo-placeholder">
+                                <p>Needle driver integration</p>
+                                <small>Click to view full image</small>
+                            </div>
+                            <div class="video-placeholder">
+                                <p>Brain biopsy demonstration</p>
+                                <small>Click to play video</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -642,10 +781,27 @@
                             <span class="tech-tag">MoveIt2</span>
                             <span class="tech-tag">Motion Planning</span>
                         </div>
-                        <div class="project-links">
+                        <div class="project-media">
+                            <h4>Project Photos & Videos</h4>
+                            <div class="photo-gallery">
+                                <div class="photo-placeholder">
+                                    <p>UR5 Motion Planning Setup</p>
+                                    <small>Click to view full image</small>
+                                </div>
+                                <div class="photo-placeholder">
+                                    <p>Collision-free Path Visualization</p>
+                                    <small>Click to view full image</small>
+                                </div>
+                                <div class="video-placeholder">
+                                    <p>Steering Wheel Installation Demo</p>
+                                    <small>Click to play video</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="project-links">
                             <a href="#" aria-label="View Motion Planning project details">Project Details</a>
                             <a href="#" aria-label="View Motion Planning source code">GitHub</a>
-                        </div>
+                        </div> -->
                     </article>
                     
                     <article class="project-card">
@@ -659,10 +815,27 @@
                             <span class="tech-tag">Sensor Fusion</span>
                             <span class="tech-tag">ROS2</span>
                         </div>
-                        <div class="project-links">
+                        <div class="project-media">
+                            <h4>Project Photos & Videos</h4>
+                            <div class="photo-gallery">
+                                <div class="photo-placeholder">
+                                    <p>Jackal Mobile Robot</p>
+                                    <small>Click to view full image</small>
+                                </div>
+                                <div class="photo-placeholder">
+                                    <p>GPS/IMU Sensor Integration</p>
+                                    <small>Click to view full image</small>
+                                </div>
+                                <div class="video-placeholder">
+                                    <p>Autonomous Navigation Demo</p>
+                                    <small>Click to play video</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="project-links">
                             <a href="#" aria-label="View State Estimation project details">Project Details</a>
                             <a href="#" aria-label="View State Estimation source code">GitHub</a>
-                        </div>
+                        </div> -->
                     </article>
                     
                     <article class="project-card">
@@ -676,10 +849,27 @@
                             <span class="tech-tag">Inverse Kinematics</span>
                             <span class="tech-tag">Manipulation</span>
                         </div>
-                        <div class="project-links">
+                        <div class="project-media">
+                            <h4>Project Photos & Videos</h4>
+                            <div class="photo-gallery">
+                                <div class="photo-placeholder">
+                                    <p>UR5 Robotic Arm Setup</p>
+                                    <small>Click to view full image</small>
+                                </div>
+                                <div class="photo-placeholder">
+                                    <p>Place-and-Draw Trajectory</p>
+                                    <small>Click to view full image</small>
+                                </div>
+                                <div class="video-placeholder">
+                                    <p>Controller Comparison Demo</p>
+                                    <small>Click to play video</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="project-links">
                             <a href="#" aria-label="View UR5 Manipulation project details">Project Details</a>
                             <a href="#" aria-label="View UR5 Manipulation source code">GitHub</a>
-                        </div>
+                        </div> -->
                     </article>
                     
                     <article class="project-card">
@@ -693,10 +883,27 @@
                             <span class="tech-tag">OpenCV</span>
                             <span class="tech-tag">ROS</span>
                         </div>
-                        <div class="project-links">
+                        <div class="project-media">
+                            <h4>Project Photos & Videos</h4>
+                            <div class="photo-gallery">
+                                <div class="photo-placeholder">
+                                    <p>Camera Calibration Setup</p>
+                                    <small>Click to view full image</small>
+                                </div>
+                                <div class="photo-placeholder">
+                                    <p>3D Semantic Map Visualization</p>
+                                    <small>Click to view full image</small>
+                                </div>
+                                <div class="video-placeholder">
+                                    <p>Object Detection Demo</p>
+                                    <small>Click to play video</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="project-links">
                             <a href="#" aria-label="View Semantic SLAM project details">Project Details</a>
                             <a href="#" aria-label="View Semantic SLAM source code">GitHub</a>
-                        </div>
+                        </div> -->
                     </article>
                 </div>
             </section>
@@ -727,29 +934,6 @@
                             <strong>Research Lab:</strong>
                             <span>Advanced Medical Instrumentation and Robotics</span>
                         </div>
-                    </div>
-                    
-                    <div class="contact-form">
-                        <h3>Send Message</h3>
-                        <form action="#" method="post" aria-label="Contact form">
-                            <div class="form-group">
-                                <label for="name">Name *</label>
-                                <input type="text" id="name" name="name" required aria-describedby="name-help">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" id="email" name="email" required aria-describedby="email-help">
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" name="subject">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message *</label>
-                                <textarea id="message" name="message" rows="5" required aria-describedby="message-help"></textarea>
-                            </div>
-                            <button type="submit" class="btn">Send Message</button>
-                        </form>
                     </div>
                 </div>
             </section>
