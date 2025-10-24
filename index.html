@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio showcasing skills, experience, and projects. Experienced software developer with expertise in modern web technologies and full-stack development.">
+    <meta name="keywords" content="portfolio, software developer, web developer, full-stack developer, programming, coding, projects, experience">
+    <meta name="author" content="Your Name">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Your Name | Professional Portfolio">
+    <meta property="og:description" content="Professional portfolio showcasing skills, experience, and projects. Experienced software developer with expertise in modern web technologies.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourname.com">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your Name | Professional Portfolio">
+    <meta name="twitter:description" content="Professional portfolio showcasing skills, experience, and projects.">
+    
+    <title>Your Name | Professional Portfolio</title>
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        /* Container and Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header and Navigation */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .header-content p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .nav-container a {
+            color: #333;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            display: block;
+            transition: background-color 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .nav-container a:hover {
+            background-color: #f8f9fa;
+            color: #667eea;
+        }
+        
+        /* Main Content */
+        main {
+            padding: 2rem 0;
+        }
+        
+        section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #667eea;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            color: #333;
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+        
+        /* About Me Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            font-weight: bold;
+            margin: 0 auto;
+        }
+        
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .skill-category h4 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            background: white;
+            margin: 0.5rem 0;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        /* Experience Section */
+        .experience-item {
+            border-left: 3px solid #667eea;
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            background: #667eea;
+            border-radius: 50%;
+        }
+        
+        .job-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .company {
+            color: #667eea;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .duration {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        
+        .job-description {
+            margin-bottom: 1rem;
+        }
+        
+        .job-description ul {
+            margin-left: 1.5rem;
+        }
+        
+        .job-description li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .project-card h4 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .project-description {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tech-tag {
+            background: #667eea;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .project-links a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border: 2px solid #667eea;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .project-links a:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        /* Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        
+        .contact-info {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item strong {
+            color: #667eea;
+            margin-right: 1rem;
+            min-width: 100px;
+        }
+        
+        .contact-form {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .btn {
+            background: #667eea;
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #5a6fd8;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2rem;
+            }
+            
+            .header-content p {
+                font-size: 1rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+            }
+            
+            .nav-container a {
+                text-align: center;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            section {
+                padding: 1.5rem;
+                margin: 1rem 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .header-content h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .profile-image {
+                width: 150px;
+                height: 150px;
+                font-size: 3rem;
+            }
+        }
+        
+        /* Accessibility Improvements */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Focus styles for keyboard navigation */
+        a:focus,
+        button:focus,
+        input:focus,
+        textarea:focus {
+            outline: 2px solid #667eea;
+            outline-offset: 2px;
+        }
+        
+        /* Skip to main content link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #667eea;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 1000;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header role="banner">
+        <div class="container">
+            <div class="header-content">
+                <h1>Your Name</h1>
+                <p>Full-Stack Developer & Software Engineer</p>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="nav-container">
+                <a href="#about" aria-label="Go to About Me section">About</a>
+                <a href="#skills" aria-label="Go to Skills section">Skills</a>
+                <a href="#experience" aria-label="Go to Experience section">Experience</a>
+                <a href="#projects" aria-label="Go to Projects section">Projects</a>
+                <a href="#contact" aria-label="Go to Contact section">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <div class="container">
+            <!-- About Me Section -->
+            <section id="about" aria-labelledby="about-heading">
+                <h2 id="about-heading">About Me</h2>
+                <div class="about-content">
+                    <div class="profile-image" aria-label="Profile picture placeholder">
+                        YN
+                    </div>
+                    <div>
+                        <h3>Professional Summary</h3>
+                        <p>I am a passionate and experienced software developer with over 5 years of experience in full-stack development. I specialize in creating scalable web applications using modern technologies and best practices. My expertise includes front-end development with React and Vue.js, back-end development with Node.js and Python, and cloud deployment with AWS and Azure.</p>
+                        
+                        <p>I have a strong foundation in computer science principles and a proven track record of delivering high-quality software solutions. I'm passionate about clean code, user experience, and continuous learning. I enjoy working in collaborative environments and mentoring junior developers.</p>
+                        
+                        <h3>Education</h3>
+                        <p><strong>Bachelor of Science in Computer Science</strong><br>
+                        University Name, Graduated 2019<br>
+                        Relevant Coursework: Data Structures, Algorithms, Software Engineering, Database Systems</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Skills Section -->
+            <section id="skills" aria-labelledby="skills-heading">
+                <h2 id="skills-heading">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Frontend Development</h4>
+                        <ul class="skill-list">
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>React.js</li>
+                            <li>Vue.js</li>
+                            <li>TypeScript</li>
+                            <li>Responsive Design</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Backend Development</h4>
+                        <ul class="skill-list">
+                            <li>Node.js</li>
+                            <li>Python (Django/Flask)</li>
+                            <li>Java (Spring Boot)</li>
+                            <li>RESTful APIs</li>
+                            <li>GraphQL</li>
+                            <li>Microservices</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Database & Cloud</h4>
+                        <ul class="skill-list">
+                            <li>PostgreSQL</li>
+                            <li>MongoDB</li>
+                            <li>Redis</li>
+                            <li>AWS (EC2, S3, Lambda)</li>
+                            <li>Azure</li>
+                            <li>Docker & Kubernetes</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Tools & Methodologies</h4>
+                        <ul class="skill-list">
+                            <li>Git & GitHub</li>
+                            <li>Agile/Scrum</li>
+                            <li>CI/CD Pipelines</li>
+                            <li>Testing (Jest, Cypress)</li>
+                            <li>Project Management</li>
+                            <li>Code Review</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Experience Section -->
+            <section id="experience" aria-labelledby="experience-heading">
+                <h2 id="experience-heading">Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="job-title">Senior Software Developer</div>
+                    <div class="company">Tech Solutions Inc.</div>
+                    <div class="duration">January 2022 - Present</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Led development of a microservices architecture serving 100,000+ daily active users</li>
+                            <li>Implemented CI/CD pipelines reducing deployment time by 60%</li>
+                            <li>Mentored 3 junior developers and conducted code reviews</li>
+                            <li>Optimized database queries resulting in 40% performance improvement</li>
+                            <li>Collaborated with cross-functional teams to deliver features on time</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-title">Full-Stack Developer</div>
+                    <div class="company">Digital Innovations LLC</div>
+                    <div class="duration">June 2020 - December 2021</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Developed responsive web applications using React and Node.js</li>
+                            <li>Integrated third-party APIs and payment processing systems</li>
+                            <li>Implemented automated testing increasing code coverage to 85%</li>
+                            <li>Participated in agile development processes and sprint planning</li>
+                            <li>Contributed to open-source projects and technical documentation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-title">Junior Software Developer</div>
+                    <div class="company">StartupXYZ</div>
+                    <div class="duration">August 2019 - May 2020</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Built and maintained web applications using modern JavaScript frameworks</li>
+                            <li>Collaborated with UI/UX designers to implement user interfaces</li>
+                            <li>Participated in code reviews and learned best practices</li>
+                            <li>Contributed to bug fixes and feature development</li>
+                            <li>Gained experience with version control and collaborative development</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Projects Section -->
+            <section id="projects" aria-labelledby="projects-heading">
+                <h2 id="projects-heading">Featured Projects</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <h4>E-Commerce Platform</h4>
+                        <div class="project-description">
+                            <p>A full-stack e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, inventory management, and admin dashboard.</p>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Stripe API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" aria-label="View E-Commerce Platform live demo">Live Demo</a>
+                            <a href="#" aria-label="View E-Commerce Platform source code">GitHub</a>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card">
+                        <h4>Task Management App</h4>
+                        <div class="project-description">
+                            <p>A collaborative task management application with real-time updates, team collaboration features, and project tracking capabilities.</p>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Express.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Socket.io</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" aria-label="View Task Management App live demo">Live Demo</a>
+                            <a href="#" aria-label="View Task Management App source code">GitHub</a>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card">
+                        <h4>Weather Dashboard</h4>
+                        <div class="project-description">
+                            <p>A responsive weather dashboard that displays current conditions and forecasts for multiple cities with interactive charts and maps.</p>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">Weather API</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" aria-label="View Weather Dashboard live demo">Live Demo</a>
+                            <a href="#" aria-label="View Weather Dashboard source code">GitHub</a>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card">
+                        <h4>Blog CMS</h4>
+                        <div class="project-description">
+                            <p>A content management system for bloggers with rich text editing, image uploads, SEO optimization, and comment system.</p>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">SQLite</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" aria-label="View Blog CMS live demo">Live Demo</a>
+                            <a href="#" aria-label="View Blog CMS source code">GitHub</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            
+            <!-- Contact Section -->
+            <section id="contact" aria-labelledby="contact-heading">
+                <h2 id="contact-heading">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <strong>Email:</strong>
+                            <span>your.email@example.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Phone:</strong>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Location:</strong>
+                            <span>Your City, State</span>
+                        </div>
+                        <div class="contact-item">
+                            <strong>LinkedIn:</strong>
+                            <span>linkedin.com/in/yourname</span>
+                        </div>
+                        <div class="contact-item">
+                            <strong>GitHub:</strong>
+                            <span>github.com/yourname</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3>Send Message</h3>
+                        <form action="#" method="post" aria-label="Contact form">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required aria-describedby="name-help">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required aria-describedby="email-help">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="5" required aria-describedby="message-help"></textarea>
+                            </div>
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; 2024 Your Name. All rights reserved. | Built with HTML5, CSS3, and JavaScript</p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript for smooth scrolling and form handling -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Form submission handling
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+        });
+        
+        // Add active class to navigation links on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
