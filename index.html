@@ -131,46 +131,42 @@
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 4rem;
-            font-weight: bold;
+            object-fit: cover;
             margin: 0 auto;
+            display: block;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
         
         /* Skills Section */
         .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+            display: block;
         }
         
         .skill-category {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
+            margin-bottom: 1.5rem;
         }
         
         .skill-category h4 {
             color: #667eea;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            display: inline-block;
+            margin-right: 1rem;
         }
         
         .skill-list {
             list-style: none;
+            display: inline;
+            padding: 0;
         }
         
         .skill-list li {
-            background: white;
-            margin: 0.5rem 0;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            display: inline;
+            margin-right: 0.5rem;
+        }
+        
+        .skill-list li:not(:last-child)::after {
+            content: ", ";
         }
         
         /* Experience Section */
@@ -393,9 +389,25 @@
         
         /* Photo Gallery */
         .photo-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
             gap: 1rem;
+        }
+        
+        .project-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-height: 400px;
+        }
+        
+        .project-video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-height: 400px;
         }
         
         .photo-placeholder, .video-placeholder {
@@ -426,6 +438,23 @@
         .photo-placeholder small, .video-placeholder small {
             font-size: 0.8rem;
             opacity: 0.8;
+        }
+        
+        .doc-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border: 2px solid #667eea;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .doc-link:hover {
+            background: #667eea;
+            color: white;
         }
         
         /* Contact Section */
@@ -569,7 +598,6 @@
             .profile-image {
                 width: 150px;
                 height: 150px;
-                font-size: 3rem;
             }
         }
         
@@ -647,9 +675,7 @@
             <section id="about" aria-labelledby="about-heading">
                 <h2 id="about-heading">About Me</h2>
                 <div class="about-content">
-                    <div class="profile-image" aria-label="Profile picture placeholder">
-                        DDG
-                    </div>
+                    <img src="images/me.png" alt="Dev Dipak Ghiya" class="profile-image" aria-label="Profile picture">
                     <div>
                         <h3>Professional Summary</h3>
                         <p> Hello there! I am a Passionate Robotics Engineer and Graduate Research Assistant at 
@@ -813,22 +839,7 @@
                     <div class="experience-photos">
                         <h4>Project Photos & Videos</h4>
                         <div class="photo-gallery">
-                            <div class="photo-placeholder">
-                                <p>KUKA LBR iiwa setup</p>
-                                <small>Click to view full image</small>
-                            </div>
-                            <div class="photo-placeholder">
-                                <p>Compliant flexure gripper</p>
-                                <small>Click to view full image</small>
-                            </div>
-                            <div class="photo-placeholder">
-                                <p>Needle driver integration</p>
-                                <small>Click to view full image</small>
-                            </div>
-                            <div class="video-placeholder">
-                                <p>Brain biopsy demonstration</p>
-                                <small>Click to play video</small>
-                            </div>
+                            <img src="images/biopsy.jpeg" alt="Brain biopsy research setup" class="project-image">
                         </div>
                     </div>
                 </div>
@@ -876,9 +887,9 @@
                 </div>
 
                 <div class="project-item">
-                    <div class="project-title">Semantic SLAM - Detecting Objects in 3D Map</div>
+                    <div class="project-title">Trajectory Optimization and Control for Free-Floating Space Manipulators</div>
                     <div class="project-tech-highlights">
-                        <strong>Technologies:</strong> ORB-SLAM3, YOLOv7, OpenCV, ROS, Raspberry Pi 4, Camera Calibration
+                        <strong>Technologies:</strong> SPART, MuJoCo, JAX, skrl
                     </div>
                     <div class="project-description">
                         <ul>
@@ -933,18 +944,10 @@
                     <div class="project-media">
                         <h4>Project Photos & Videos</h4>
                         <div class="photo-gallery">
-                            <div class="photo-placeholder">
-                                <p>UR5 Motion Planning Setup</p>
-                                <small>Click to view full image</small>
-                            </div>
-                            <div class="photo-placeholder">
-                                <p>Collision-free Path Visualization</p>
-                                <small>Click to view full image</small>
-                            </div>
-                            <div class="video-placeholder">
-                                <p>Steering Wheel Installation Demo</p>
-                                <small>Click to play video</small>
-                            </div>
+                            <video controls class="project-video">
+                                <source src="videos/est_planner.webm" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
                 </div>
@@ -1005,18 +1008,10 @@
                     <div class="project-media">
                         <h4>Project Photos & Videos</h4>
                         <div class="photo-gallery">
-                            <div class="photo-placeholder">
-                                <p>UR5 Robotic Arm Setup</p>
-                                <small>Click to view full image</small>
-                            </div>
-                            <div class="photo-placeholder">
-                                <p>Place-and-Draw Trajectory</p>
-                                <small>Click to view full image</small>
-                            </div>
-                            <div class="video-placeholder">
-                                <p>Controller Comparison Demo</p>
-                                <small>Click to play video</small>
-                            </div>
+                            <img src="images/rdkdc.png" alt="UR5 Manipulation project" class="project-image">
+                        </div>
+                        <div>
+                            <a href="docs/finalproject_rdkdc.pdf" target="_blank" class="doc-link">View Project Documentation (PDF)</a>
                         </div>
                     </div>
                 </div>
@@ -1040,18 +1035,13 @@
                     <div class="project-media">
                         <h4>Project Photos & Videos</h4>
                         <div class="photo-gallery">
-                            <div class="photo-placeholder">
-                                <p>Camera Calibration Setup</p>
-                                <small>Click to view full image</small>
-                            </div>
-                            <div class="photo-placeholder">
-                                <p>3D Semantic Map Visualization</p>
-                                <small>Click to view full image</small>
-                            </div>
-                            <div class="video-placeholder">
-                                <p>Object Detection Demo</p>
-                                <small>Click to play video</small>
-                            </div>
+                            <video controls class="project-video">
+                                <source src="videos/slam.webm" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div>
+                            <a href="docs/cv_final_writup.pdf" target="_blank" class="doc-link">View Project Documentation (PDF)</a>
                         </div>
                     </div>
                 </div>
@@ -1073,7 +1063,7 @@
                         </div>
                         <div class="contact-item">
                             <strong>LinkedIn:</strong>
-                            <span>linkedin.com/in/dev-ghiya</span>
+                            <span><a href="https://www.linkedin.com/in/dev-ghiya" target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: none;">linkedin.com/in/dev-ghiya</a></span>
                         </div>
                         <div class="contact-item">
                             <strong>University:</strong>
@@ -1110,12 +1100,6 @@
                     });
                 }
             });
-        });
-        
-        // Form submission handling
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
         });
         
         // Add active class to navigation links on scroll
