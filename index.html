@@ -676,7 +676,8 @@
                         <div class="duration">Aug 2024 - May 2026</div>
                         <div class="advisor">Advisor: Dr. Peter Kazanzides</div>
                         <div class="coursework">
-                            <strong>Coursework:</strong> Reinforcement Learning, Algorithm for Sensor-based Robots, Trajectory Design for Space Systems, Machine Learning: Deep Learning, Computer Vision, Robot Sensors and Actuators
+                            <strong>Coursework:</strong> Reinforcement Learning, Algorithm for Sensor-based Robots, Trajectory 
+                            Design for Space Systems, Machine Learning: Deep Learning, Computer Vision, Robot Sensors and Actuators
                         </div>
                     </div>
                     
@@ -687,7 +688,7 @@
                         <div class="gpa">GPA: 3.95/4.0</div>
                         <div class="coursework">
                             <strong>Coursework:</strong> Computer Aided Design, Control System , Design and Kinematics of Machines, Dynamics of Machines, 
-                            Semi-conductor manufacturing.  
+                            Semi-conductor manufacturing
                          </div>
                     </div>
                 </div>
@@ -745,7 +746,7 @@
             
             <!-- Experience Section -->
             <section id="experience" aria-labelledby="experience-heading">
-                <h2 id="experience-heading">Professional Experience</h2>
+                <h2 id="experience-heading">Experience</h2>
                 
                 <div class="experience-item">
                     <div class="job-title">Graduate Research Assistant</div>
@@ -756,11 +757,11 @@
                             <li>In my role as a Graduate Research Assistant at the AMIRo Lab, I am developing a high-precision mechanical 
                                 positioning system for small animal FLASH X-ray therapy. I am implementing a novel dual-arm robotic configuration 
                                 that uses 3D-printed collimator assemblies. I have successfully validated the system's alignment, achieving 20-40 
-                                micrometer accuracy as measured by a Keyence 3D profiler.
+                                micrometer accuracy as measured by a Keyence 3D profiler
                             </li>
                             <li>
                                 I am designing a multi-modal mouse bed using Creo Parametric, specified for 80mm bi-directional translation, 
-                                90-degree rotation, and a 250g load capacity (with \leq 0.4mm deflection confirmed by FEA). This system integrates 
+                                90-degree rotation, and a 250g load capacity (with < 0.4mm deflection confirmed by FEA). This system integrates 
                                 hybrid manual or electronic control, variable collimator patterns for targeted tumor ablation, and multi-nozzle 
                                 anesthesia delivery. The resulting modular platform is compatible with both micro-CT imaging and FLASH therapy 
                                 systems, which enables a seamless workflow for image-guided preclinical radiotherapy research
@@ -796,11 +797,17 @@
                     <div class="duration">May 2023 - July 2023</div>
                     <div class="job-description">
                         <ul>
-                            <li>Contributed to a learning-based planning workflow on the KUKA LBR iiwa by integrating my 2 DOF needle driver into the pipeline for autonomous, minimally invasive stereotactic brain biopsy</li>
-                            <li>Delivered end-effector integration, safety interlocks, and Raspberry Pi based motor control for insertion and rotation</li>
-                            <li>Designed a novel aperture-style compliant flexure gripper for 2 to 5 mm needles, achieving 0.1 mm insertion accuracy and a 24% weight reduction</li>
-                            <li>Used PLA-based compliant mechanics, validated on tissue-mimicking phantoms</li>
-                            <li>Gained hands-on experience with robotic arm programming and safety systems</li>
+                            <li>Designed a novel, aperture-style compliant flexure gripper for 2-5mm needles, achieving 0.1mm 
+                                insertion accuracy and a 24% weight reduction over previous designs. The PLA-based compliant mechanism,
+                                 actuated by three high-torque motors, allows for dynamic diameter adjustment while maintaining safe 
+                                 gripping forces, all controlled by a Raspberry Pi
+                            </li>
+                            <li>
+                                Successfully integrated the custom 2-DOF needle driver into a learning-based planning workflow on a KUKA LBR 
+                                iiwa robotic arm. This work delivered the complete end-effector integration, safety interlocks, and motor 
+                                controls required to demonstrate an autonomous, minimally invasive stereotactic brain biopsy on tissue-mimicking 
+                                phantoms
+                            </li>
                         </ul>
                     </div>
                     <div class="experience-photos">
@@ -829,19 +836,98 @@
             
             <!-- Projects Section -->
             <section id="projects" aria-labelledby="projects-heading">
-                <h2 id="projects-heading">Featured Projects</h2>
+                <h2 id="projects-heading">Projects</h2>
+
+                <div class="project-item">
+                    <div class="project-title">Learning to Push: Deep Reinforcement Learning for Robotic Object Alignment on Tabletop Surfaces</div>
+                    <div class="project-tech-highlights">
+                        <strong>Technologies:</strong> Stable-Baselines3, MuJoCo, Jax, SAC, HER, PyTorch
+                    </div>
+                    <div class="project-description">
+                        <ul>
+                            <li>
+                                Currently developing a goal-conditioned deep reinforcement learning pipeline in MuJoCo/Gymnasium 
+                                to solve the sparse-reward, complex-contact problem of planar object pushing. The solution leverages 
+                                Soft Actor-Critic (SAC) with Hindsight Experience Replay (HER) to manage the sparse reward landscape, 
+                                using an 8D state vector (with [sin(θ),cos(θ)] angle representation) and a 2D velocity action space 
+                                ([vx​,vy​]). The objective is to achieve a final pose accuracy of < 2cm position error and < 5° 
+                                orientation error and to systematically evaluate the policy's zero-shot generalization to unseen 
+                                geometries.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <h4>Project Photos & Videos</h4>
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder">
+                                <p>Camera Calibration Setup</p>
+                                <small>Click to view full image</small>
+                            </div>
+                            <div class="photo-placeholder">
+                                <p>3D Semantic Map Visualization</p>
+                                <small>Click to view full image</small>
+                            </div>
+                            <div class="video-placeholder">
+                                <p>Object Detection Demo</p>
+                                <small>Click to play video</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Semantic SLAM - Detecting Objects in 3D Map</div>
+                    <div class="project-tech-highlights">
+                        <strong>Technologies:</strong> ORB-SLAM3, YOLOv7, OpenCV, ROS, Raspberry Pi 4, Camera Calibration
+                    </div>
+                    <div class="project-description">
+                        <ul>
+                            <li>
+                                Engineering a physics-informed Deep Reinforcement Learning (RL) pipeline to solve the optimal 
+                                end-effector 'place' task (A-to-B) for a high-dimensional, free-floating space manipulator. This 
+                                approach tackles the complex, non-linear system dynamics by analytically deriving them with SPART 
+                                and integrating them into a high-fidelity MuJoCo "free-space" simulation. A DRL agent is then being 
+                                trained using the skrl library (JAX backend) to learn an optimal policy that achieves this placement 
+                                goal, with its performance (success rate, runtime) benchmarked against a simplified, kinematics-only 
+                                baseline.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <h4>Project Photos & Videos</h4>
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder">
+                                <p>Camera Calibration Setup</p>
+                                <small>Click to view full image</small>
+                            </div>
+                            <div class="photo-placeholder">
+                                <p>3D Semantic Map Visualization</p>
+                                <small>Click to view full image</small>
+                            </div>
+                            <div class="video-placeholder">
+                                <p>Object Detection Demo</p>
+                                <small>Click to play video</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="project-item">
                     <div class="project-title">Optimal Motion Planning for UR5-Based Steering Wheel Installation</div>
                     <div class="project-tech-highlights">
-                        <strong>Technologies:</strong> C++, UR5, MoveIt2, Motion Planning, FLANN KD-tree, Dijkstra
+                        <strong>Technologies:</strong> C++, UR5e, MoveIt2, Motion Planning, FLANN 
                     </div>
                     <div class="project-description">
                         <ul>
-                            <li>Developed a custom C++ PRM motion planner for a UR5, constructing a collision-free roadmap in 6D C-space with radian-distance edge connections</li>
-                            <li>Used FLANN KD-tree nearest neighbors and Dijkstra for efficient path search</li>
-                            <li>Integrated with MoveIt2 for real-time collision checking, achieving 30s planning time in cluttered automotive workcells</li>
-                            <li>Successfully implemented steering wheel installation automation on the vehicle</li>
+                            <li>
+                                Engineered a custom moveit_core planner plugin for ROS 2, implementing the Expansive Space Trees (EST) 
+                                algorithm in C++. The planner's expansive strategy was driven by a roulette wheel selection 
+                                mechanism to bias node expansion towards high-weight, unexplored regions. New states were generated using 
+                                normal distribution sampling around selected nodes, and a k-d tree was implemented for efficient nearest-neighbor 
+                                queries within the 6-DOF configuration space. The system was fully integrated with a UR5e robot, leveraging 
+                                MoveIt's PlanningScene for state validation and collision-checking, and published visualization_msgs for 
+                                real-time tree and trajectory visualization in RViz
+                            </li>
                         </ul>
                     </div>
                     <div class="project-media">
@@ -870,10 +956,13 @@
                     </div>
                     <div class="project-description">
                         <ul>
-                            <li>Developed Extended Kalman Filter for 6-DOF robot localization by implementing nonlinear system dynamics and measurement models</li>
-                            <li>Fused GPS/IMU sensor data to achieve 0.5 meter positioning accuracy on uneven terrain with slopes up to 30 degrees</li>
-                            <li>Implemented real-time sensor fusion algorithm integrating geodetic coordinate transformations and adaptive noise covariance matrices</li>
-                            <li>Reduced position drift from 5m to 0.3m over trajectories while maintaining 10Hz update rate for autonomous navigation</li>
+                            <li>
+                                Developed a real-time Extended Kalman Filter (EKF) for 6-DOF robot localization by implementing
+                                 nonlinear system dynamics and measurement models to fuse GPS/IMU data. The algorithm, which integrated 
+                                 geodetic coordinate transformations and adaptive noise covariance matrices, achieved 0.5-meter positioning 
+                                 accuracy on uneven terrain (30° slopes) and reduced position drift from 5m to 0.3m, all while maintaining 
+                                 a 10Hz update rate for autonomous navigation
+                            </li>
                         </ul>
                     </div>
                     <div class="project-media">
@@ -902,10 +991,15 @@
                     </div>
                     <div class="project-description">
                         <ul>
-                            <li>Programmed a UR5 to execute a "place-and-draw" skill, teaching start/end waypoints and drew two 5 cm parallel lines with 10 cm spacing</li>
-                            <li>Designed the pipeline to be rotation-invariant with respect to the initial point orientation</li>
-                            <li>Implemented and compared three MATLAB controllers—analytical IK (DH + Paden–Kahan with optimal selection among 8 solutions), Resolved-Rate, and Jacobian Transpose</li>
-                            <li>Incorporated manipulability-based singularity avoidance and tuning K and Δ𝑡 for stable, accurate trajectory tracking</li>
+                            <li>
+                                Engineered a comparative trajectory tracking framework in MATLAB for a UR5 manipulator to execute a rotation-invariant,
+                                 multi-segment Cartesian "place-and-draw" task. The framework benchmarked three distinct kinematic controllers: 
+                                 (1) a full Analytical IK solver, derived from DH parameters and Paden–Kahan subproblems with optimal selection from 
+                                 8 solutions; (2) a Resolved-Rate controller (Jacobian-based); and (3) a Jacobian Transpose controller. Robustness was 
+                                 achieved by incorporating manipulability-based singularity avoidance and tuning controller gains (K) and time steps (Δt) 
+                                 for stable, high-fidelity path tracking
+
+                            </li>
                         </ul>
                     </div>
                     <div class="project-media">
@@ -934,10 +1028,13 @@
                     </div>
                     <div class="project-description">
                         <ul>
-                            <li>Built a perception pipeline for monocular mapping in 3D with semantic labeling, combining ORB-SLAM3 with ROS for mapping</li>
-                            <li>Integrated YOLOv7 for object detection across a custom dataset of over 1,000 images and depth estimation</li>
-                            <li>Developed a program for camera calibration to extract the intrinsics of the camera using OpenCV</li>
-                            <li>Created a python script to stream raw image inputs from Raspberry Pi 4 to ROS bag files for consistent input for testing and analysis</li>
+                            <li>
+                                Built a perception pipeline for monocular mapping in 3D with semantic labeling, combining ORB-SLAM3
+                                 with ROS for mapping and YOLOv7 for object detection across a custom dataset of over 1,000 images
+                                  and depth estimation. Developed a program for camera calibration to extract the intrinsics of the 
+                                  camera using OpenCV and a python script to stream raw image inputs from Raspberry Pi 4 to ROS 
+                                  bag files for consistent input for testing and analysis
+                            </li>
                         </ul>
                     </div>
                     <div class="project-media">
