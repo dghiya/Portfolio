@@ -132,9 +132,10 @@
             height: 200px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 2rem auto 0 auto;
+            margin: 0 auto;
             display: block;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            padding-top: 2rem;
         }
         
         /* Skills Section */
@@ -144,20 +145,24 @@
         
         .skill-category {
             margin-bottom: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
         }
         
         .skill-category h4 {
             color: #667eea;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0;
             font-size: 1.1rem;
-            display: inline-block;
-            margin-right: 1rem;
+            min-width: 180px;
+            flex-shrink: 0;
         }
         
         .skill-list {
             list-style: none;
             display: inline;
             padding: 0;
+            flex: 1;
         }
         
         .skill-list li {
@@ -363,6 +368,11 @@
             margin-bottom: 0.5rem;
         }
         
+        .project-doc-link {
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
         /* Experience Photos */
         .experience-photos {
             margin-top: 1.5rem;
@@ -393,6 +403,7 @@
             flex-wrap: wrap;
             gap: 1rem;
             align-items: flex-start;
+            justify-content: flex-start;
         }
         
         /* Ensure images come first (left side) */
@@ -418,8 +429,8 @@
         }
         
         .project-image {
-            max-width: 100%;
-            width: 100%;
+            max-width: 500px;
+            width: auto;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -428,8 +439,8 @@
         }
         
         .project-video {
-            max-width: 100%;
-            width: 100%;
+            max-width: 500px;
+            width: auto;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -634,6 +645,15 @@
                 grid-template-columns: 1fr;
             }
             
+            .skill-category {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .skill-category h4 {
+                min-width: auto;
+            }
+            
             section {
                 padding: 1.5rem;
                 margin: 1rem 0;
@@ -768,9 +788,7 @@
                     <img src="images/Me.jpeg" alt="Dev Dipak Ghiya" class="profile-image" aria-label="Profile picture">
                     <div>
                         <h3>Professional Summary</h3>
-                        <p> Hello there! I am a Graduate Student at Johns Hopkins University.
-
-                        </p>
+                        <p> Hello there! I am a Graduate Student at Johns Hopkins University.</p>
                         
                         <p>  
                             <strong>My interests</strong> lie at the exciting intersection of robotics and mechanics. 
@@ -1029,14 +1047,14 @@
             
                 
                 <div class="project-item">
-                    <div class="project-title">Jackal Mobile Robot State Estimation</div>
+                    <div class="project-title">State Estimation for Jackal Mobile Robot </div>
                     <div class="project-tech-highlights">
                         Extended Kalman Filter, Sensor Fusion, ROS2, C++
                     </div>
                     <div class="project-description">
                         <ul>
                             <li>
-                                Developed a real-time Extended Kalman Filter (EKF) for 6-DOF robot localization by implementing
+                                Developed a real-time Extended Kalman Filter (EKF) in C++ for 6-DOF robot localization by implementing
                                  nonlinear system dynamics and measurement models to fuse GPS/IMU data. The algorithm, which integrated 
                                  geodetic coordinate transformations and adaptive noise covariance matrices, achieved 0.5-meter positioning 
                                  accuracy on uneven terrain (30° slopes) and reduced position drift from 5m to 0.3m, all while maintaining 
@@ -1065,12 +1083,12 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="project-doc-link">
+                        <a href="docs/FinalProject_RDKDC.pdf" target="_blank" class="doc-link">View Project Documentation (PDF)</a>
+                    </div>
                     <div class="project-media">
                         <div class="photo-gallery">
                             <img src="images/RDKDC.png" alt="UR5 Manipulation project" class="project-image">
-                        </div>
-                        <div>
-                            <a href="docs/FinalProject_RDKDC.pdf" target="_blank" class="doc-link">View Project Documentation (PDF)</a>
                         </div>
                     </div>
                 </div>
@@ -1091,16 +1109,15 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="project-doc-link">
+                        <a href="docs/CV_Final_Writup.pdf" target="_blank" class="doc-link">View Project Documentation (PDF)</a>
+                    </div>
                     <div class="project-media">
-                        <h4>Project Photos & Videos</h4>
                         <div class="photo-gallery">
                             <video controls class="project-video">
                                 <source src="videos/Slam.webm" type="video/webm">
                                 Your browser does not support the video tag.
                             </video>
-                        </div>
-                        <div>
-                            <a href="docs/CV_Final_Writup.pdf" target="_blank" class="doc-link">View Project Documentation (PDF)</a>
                         </div>
                     </div>
                 </div>
