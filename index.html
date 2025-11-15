@@ -770,6 +770,7 @@
                 <a href="#TechnicalSkills" aria-label="Go to Skills section">Skills</a>
                 <a href="#Experience" aria-label="Go to Experience section">Experience</a>
                 <a href="#Projects" aria-label="Go to Projects section">Projects</a>
+                <a href="#miscellaneous" aria-label="Go to Miscellaneous Projects section">Miscellaneous</a>
                 <a href="#Publications" aria-label="Go to Publications section">Publications</a>
                 <a href="#Patents" aria-label="Go to Patents section">Patents</a>
                 <a href="#Contact" aria-label="Go to Contact section">Contact</a>
@@ -849,7 +850,9 @@
                             <li>MoveIt</li>
                             <li>RViz</li>
                             <li>PyTorch</li>
+                            <li>OpenCV</li>
                             <li>CVXPY</li>
+                            <li>skrl</li>
                             <li>Stable-Baselines3</li>
                         </ul>
                     </div>
@@ -861,8 +864,16 @@
                             <li>Git</li>
                             <li>Linux</li>
                             <li>Docker</li>
-                            <li>Arduino</li>
                             <li> Simulator (Gazebo, MuJoCo)</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Hardware Platform</h4>
+                        <ul class="skill-list">
+                            <li>Embedded Systems (ESP32, Raspberry Pi, Arduino)</li>
+                            <li>Stereo Camera</li>
+                            <li>UR5e</li>
                         </ul>
                     </div>
 
@@ -874,6 +885,7 @@
                             <li>ANSYS</li>
                             <li>Siemens NX</li>
                             <li>3D Printing</li>
+                            <li>Machining</li>
                         </ul>
                     </div>
 
@@ -967,6 +979,19 @@
                                 Your browser does not support the video tag.
                             </video>
                         </div>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-title">Trainee Engineer</div>
+                    <div class="company">Hema Laboratories Pvt. Ltd</div>
+                    <div class="duration">May 2022 – Jul 2022</div>
+                    <div class="project-tech-highlights">Dehradun, India</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Operated and monitored 3 automated manufacturing processes for pharmaceutical products.</li>
+                            <li>Executed inspection tests on Active Pharmaceutical Ingredients (APIs) using High-Performance Liquid Chromatography (HPLC).</li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -1121,6 +1146,12 @@
                     </div>
                 </div>
                 
+            </section>
+            
+            <!-- Miscellaneous Projects Section -->
+            <section id="miscellaneous" aria-labelledby="miscellaneous-heading">
+                <h2 id="miscellaneous-heading">Miscellaneous Projects</h2>
+                
                 <div class="project-item">
                     <div class="project-title">Bachelor Thesis: Bioinspired Morphing Robot</div>
                     <div class="project-tech-highlights">
@@ -1133,14 +1164,14 @@
                                 biomimetic research to identify 8 distinct operational configurations for versatile terrain 
                                 adaptation. Developed detailed mechanical design integrating dual locomotion systems: mecanum 
                                 wheels for omnidirectional ground movement and quadcopter propellers for aerial capabilities, 
-                                enabling hybrid air-ground movement schemes.
+                                enabling hybrid air-ground movement schemes
                             </li>
                             <li>
                                 Created 3D CAD models and engineering drawings specifying actuator placement, joint mechanisms, 
                                 and transformation sequences between configurations. Implemented basic Arduino control code for 
                                 manual switching between ground-based car configuration and aerial drone configuration through 
                                 servo motor actuation. Validated design feasibility through kinematic analysis and structural 
-                                simulations of the morphing mechanisms.
+                                simulations of the morphing mechanisms
                             </li>
                         </ul>
                     </div>
@@ -1148,6 +1179,63 @@
                         <div class="photo-gallery">
                             <img src="images/morphing_robot.png" alt="Robot Morphing Project" class="project-image">
                         </div>
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-title">Hand-Eye Calibration (AX=XB)</div>
+                    <div class="project-tech-highlights">
+                        MATLAB, ROS, UR5
+                    </div>
+                    <div class="duration">Jan 2025 – Feb 2025</div>
+                    <div class="project-description">
+                        <ul>
+                            <li>Implemented the Park & Martin algorithm (AX=XB) in MATLAB to solve the hand-eye calibration problem for a UR5 (eye-in-hand)</li>
+                            <li>Achieved &lt;0.1 mm translation error and &lt;0.01 radian rotation error by processing real-world transformation data from ROS (tf2_echo)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-title">Remote Operated Car</div>
+                    <div class="project-tech-highlights">
+                        Arduino, Bluetooth, GPS, I2C
+                    </div>
+                    <div class="duration">Nov 2024 – Dec 2024</div>
+                    <div class="project-description">
+                        <ul>
+                            <li>Designed and fabricated an Arduino-based ROV with dual control modes (Bluetooth smartphone app and I2C joystick)</li>
+                            <li>Integrated a GPS module to implement a geofencing feature, ensuring the ROV automatically returned to a predefined operational area</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-title">Head of Technical Department, PDEU Robotics Club</div>
+                    <div class="project-tech-highlights">
+                        Leadership, Mentoring, Project Management
+                    </div>
+                    <div class="duration">Jun 2022 – Jul 2023</div>
+                    <div class="project-description">
+                        <ul>
+                            <li>Led the university's robotics club, supervising 10+ technical projects and mentoring 8 
+                                junior team members in robotics design and development</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-title">Robofest 3.0 Competition</div>
+                    <div class="project-tech-highlights">
+                        3D Printing, Mechanical Design, Project Management
+                    </div>
+                    <div class="duration">2023</div>
+                    <div class="project-description">
+                        <ul>
+                            <li>Engineered and fabricated an all-terrain rover for a national competition, 
+                                designing 3D-printed components to navigate 60° inclines and 15cm deep water</li>
+                            <li>Managed the team's budget and procurement timeline for all components</li>
+                        </ul>
                     </div>
                 </div>
             </section>
