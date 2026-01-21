@@ -8,13 +8,11 @@
     <meta name="author" content="Dev Dipak Ghiya">
     <meta name="robots" content="index, follow">
     
-    <!-- Open Graph Meta Tags for Social Media -->
     <meta property="og:title" content="Dev Dipak Ghiya | Robotics Engineer Portfolio">
     <meta property="og:description" content="Professional portfolio showcasing robotics engineering skills, research experience, and projects. Graduate student in Robotics at Johns Hopkins University.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yourname.com">
     
-    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Dev Dipak Ghiya | Robotics Engineer Portfolio">
     <meta name="twitter:description" content="Professional portfolio showcasing robotics engineering skills, research experience, and projects.">
@@ -372,28 +370,17 @@
             margin-bottom: 1.5rem;
         }
         
-        /* Experience Photos */
-        .experience-photos {
-            margin-top: 1.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #eee;
+        /* Experience Photos & Project Media Updates */
+        .experience-photos, .project-media {
+            margin-top: 0.5rem;
+            margin-bottom: 1.5rem;
+            padding-top: 0;
+            border-top: none; /* Removed the line separator as requested */
         }
         
-        .experience-photos h4 {
+        .experience-photos h4, .project-media h4 {
             color: #667eea;
-            margin-bottom: 1rem;
-        }
-        
-        /* Project Media */
-        .project-media {
-            margin-top: 1.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #eee;
-        }
-        
-        .project-media h4 {
-            color: #667eea;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
         
         /* Photo Gallery */
@@ -405,13 +392,14 @@
             justify-content: flex-start;
         }
         
-        /* Ensure images come first (left side) */
-        .photo-gallery .project-image {
+        /* UPDATED ORDERING:
+           Videos (order 1) come before Images (order 2)
+        */
+        .photo-gallery .project-video {
             order: 1;
         }
         
-        /* Ensure videos come second (right side) */
-        .photo-gallery .project-video {
+        .photo-gallery .project-image {
             order: 2;
         }
         
@@ -750,10 +738,8 @@
     </style>
 </head>
 <body>
-    <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
-    <!-- Header -->
     <header role="banner">
         <div class="container">
             <div class="header-content">
@@ -762,7 +748,6 @@
         </div>
     </header>
     
-    <!-- Navigation -->
     <nav role="navigation" aria-label="Main navigation">
         <div class="container">
             <div class="nav-container">
@@ -778,10 +763,8 @@
         </div>
     </nav>
     
-    <!-- Main Content -->
     <main id="main-content" role="main">
         <div class="container">
-            <!-- About Me Section -->
             <section id="about" aria-labelledby="about-heading">
                 <h2 id="about-heading">About Me</h2>
                 <div class="about-content">
@@ -799,7 +782,6 @@
                 </div>
             </section>
             
-            <!-- Education Section -->
             <section id="education" aria-labelledby="education-heading">
                 <h2 id="education-heading">Education</h2>
                 <div class="education-content">
@@ -827,7 +809,6 @@
                 </div>
             </section>
             
-            <!-- Skills Section -->
             <section id="skills" aria-labelledby="skills-heading">
                 <h2 id="skills-heading">Technical Skills</h2>
                 <div class="skills-grid">
@@ -892,7 +873,6 @@
                 </div>
             </section>
             
-            <!-- Experience Section -->
             <section id="experience" aria-labelledby="experience-heading">
                 <h2 id="experience-heading">Experience</h2>
                 
@@ -926,6 +906,11 @@
                     <div class="project-tech-highlights">
                         SolidWorks, Raspberry Pi, MATLAB, ROS2, C++
                     </div>
+                    <div class="experience-photos">
+                        <div class="photo-gallery">
+                            <img src="images/Biopsy.jpeg" alt="Brain biopsy research setup" class="project-image">
+                        </div>
+                    </div>
                     <div class="job-description">
                         <ul>
                             <li>Designed a novel, aperture-style compliant flexure gripper for 2-5mm needles, achieving 0.1mm 
@@ -941,11 +926,6 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="experience-photos">
-                        <div class="photo-gallery">
-                            <img src="images/Biopsy.jpeg" alt="Brain biopsy research setup" class="project-image">
-                        </div>
-                    </div>
                 </div>
                 
                 <div class="experience-item">
@@ -954,6 +934,15 @@
                     <div class="duration">May 2022 - Aug 2023 </div>
                     <div class="project-tech-highlights">
                         Siemens NX, ANSYS, OPENFOAM, MATLAB, Team Building, Team Management
+                    </div>
+                    <div class="experience-photos">
+                        <div class="photo-gallery">
+                            <img src="images/supra_car.jpeg" alt="Formula Student Race Car" class="project-image">
+                            <video controls class="project-video">
+                                <source src="videos/supra_car.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
                     </div>
                     <div class="job-description">
                         <ul>
@@ -971,15 +960,6 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="experience-photos">
-                        <div class="photo-gallery">
-                            <img src="images/supra_car.jpeg" alt="Formula Student Race Car" class="project-image">
-                            <video controls class="project-video">
-                                <source src="videos/supra_car.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
                 </div>
                 
                 <div class="experience-item">
@@ -996,25 +976,30 @@
                 </div>
             </section>
             
-            <!-- Projects Section -->
             <section id="projects" aria-labelledby="projects-heading">
                 <h2 id="projects-heading">Projects</h2>
 
                 <div class="project-item">
-                    <div class="project-title">Learning to Push: Deep Reinforcement Learning for Robotic Object Alignment on Tabletop Surfaces</div>
+                    <div class="project-title">Deep Reinforcement Learning for Contact-Rich Manipulation</div>
                     <div class="project-tech-highlights">
                         Stable-Baselines3, MuJoCo, Jax, SAC, HER, PyTorch, Robosuite
+                    </div>
+                    <div class="project-media">
+                        <div class="photo-gallery">
+                            <video controls class="project-video">
+                                <source src="videos/Contact_Rich.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
                     </div>
                     <div class="project-description">
                         <ul>
                             <li>
-                                Currently developing a goal-conditioned deep reinforcement learning pipeline in Robosuite/Gymnasium 
-                                to solve the sparse-reward, complex-contact problem of planar object pushing.  Training policies with
-                                Stable-Baselines3 (SB3) using leverages Soft Actor-Critic (SAC) with Hindsight Experience Replay (HER) to
-                                manage the sparse reward , using an 8D state vector (with [sin(θ),cos(θ)] angle representation) 
-                                and a 2D velocity action space [vx​,vy​]. The objective is to achieve a final pose accuracy of < 2cm 
-                                position error and < 5° orientation error and to systematically evaluate the policy's zero-shot 
-                                generalization to unseen geometries.
+                                Engineered a custom Soft Actor-Critic (SAC) algorithm from scratch to solve contact-rich 
+                                manipulation tasks, integrating a bespoke MuJoCo environment to train a Franka Panda robot
+                                Synthesized robust control policies to align randomly oriented rigid objects to a fixed goal 
+                                configuration through non-prehensile pushing, achieving more than 95% success rate validated 
+                                via TensorBoard analytics
                             </li>
                         </ul>
                     </div>
@@ -1029,13 +1014,10 @@
                     <div class="project-description">
                         <ul>
                             <li>
-                                Engineering a physics-informed Deep Reinforcement Learning (RL) pipeline to solve the optimal 
-                                end-effector 'place' task (A-to-B) for a high-dimensional, free-floating space manipulator. This 
-                                approach tackles the complex, non-linear system dynamics by analytically deriving them with SPART 
-                                and integrating them into a high-fidelity MuJoCo "free-space" simulation. A DRL agent is then being 
-                                trained using the skrl library (JAX backend) to learn an optimal policy that achieves this placement 
-                                goal, with its performance (success rate, runtime) benchmarked against a simplified, kinematics-only 
-                                baseline.
+                                Architected a simulation of a custom 3DOF free-floating space arm in MuJoCo, creating a stable testbed 
+                                to accurately model the system non-linear dynamics. Implemented a control policy using Stable-Baselines3 
+                                and Hindsight Experience Replay to resolve sparse-reward trajectory problems, achieving more than 99% 
+                                base stability and 0.1 m end-effector precision validated via TensorBoard
                             </li>
                         </ul>
                     </div>
@@ -1045,6 +1027,14 @@
                     <div class="project-title">Optimal Motion Planning for UR5-Based Steering Wheel Installation</div>
                     <div class="project-tech-highlights">
                         C++, MoveIt2, Motion Planning, FLANN, UR5e 
+                    </div>
+                    <div class="project-media">
+                        <div class="photo-gallery">
+                            <video controls class="project-video">
+                                <source src="videos/EST_planner.mp4" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
                     </div>
                     <div class="project-description">
                         <ul>
@@ -1058,14 +1048,6 @@
                                 real-time tree and trajectory visualization in RViz
                             </li>
                         </ul>
-                    </div>
-                    <div class="project-media">
-                        <div class="photo-gallery">
-                            <video controls class="project-video">
-                                <source src="videos/EST_planner.webm" type="video/webm">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
                     </div>
                 </div>
             
@@ -1094,6 +1076,11 @@
                     <div class="project-tech-highlights">
                         UR5e, MATLAB, Inverse Kinematics, Analytical IK, Resolved-Rate, Jacobian Transpose
                     </div>
+                    <div class="project-media">
+                        <div class="photo-gallery">
+                            <img src="images/RDKDC.png" alt="UR5 Manipulation project" class="project-image">
+                        </div>
+                    </div>
                     <div class="project-description">
                         <ul>
                             <li>
@@ -1110,17 +1097,20 @@
                     <div class="project-doc-link">
                         <a href="docs/FinalProject_RDKDC.pdf" target="_blank" class="doc-link">View Project Documentation (PDF)</a>
                     </div>
-                    <div class="project-media">
-                        <div class="photo-gallery">
-                            <img src="images/RDKDC.png" alt="UR5 Manipulation project" class="project-image">
-                        </div>
-                    </div>
                 </div>
                 
                 <div class="project-item">
                     <div class="project-title">Semantic SLAM - Detecting Objects in 3D Map</div>
                     <div class="project-tech-highlights">
                         ORB-SLAM3, YOLOv7, OpenCV, ROS , Raspberry Pi 4, Camera Calibration
+                    </div>
+                    <div class="project-media">
+                        <div class="photo-gallery">
+                            <video controls class="project-video">
+                                <source src="videos/Slam.mp4" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
                     </div>
                     <div class="project-description">
                         <ul>
@@ -1136,19 +1126,10 @@
                     <div class="project-doc-link">
                         <a href="docs/CV_Final_Writeup.pdf" target="_blank" class="doc-link">View Project Documentation (PDF)</a>
                     </div>
-                    <div class="project-media">
-                        <div class="photo-gallery">
-                            <video controls class="project-video">
-                                <source src="videos/Slam.webm" type="video/webm">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
                 </div>
                 
             </section>
             
-            <!-- Miscellaneous Projects Section -->
             <section id="miscellaneous" aria-labelledby="miscellaneous-heading">
                 <h2 id="miscellaneous-heading">Miscellaneous Projects</h2>
                 
@@ -1156,6 +1137,11 @@
                     <div class="project-title">Bachelor Thesis: Bioinspired Morphing Robot</div>
                     <div class="project-tech-highlights">
                        SolidWorks, Raspberry Pi, ANSYS, MATLAB
+                    </div>
+                    <div class="project-media">
+                        <div class="photo-gallery">
+                            <img src="images/morphing_robot.png" alt="Robot Morphing Project" class="project-image">
+                        </div>
                     </div>
                     <div class="project-description">
                         <ul>
@@ -1174,11 +1160,6 @@
                                 simulations of the morphing mechanisms
                             </li>
                         </ul>
-                    </div>
-                    <div class="project-media">
-                        <div class="photo-gallery">
-                            <img src="images/morphing_robot.png" alt="Robot Morphing Project" class="project-image">
-                        </div>
                     </div>
                 </div>
                 
@@ -1199,6 +1180,14 @@
                     <div class="project-title">Remote Operated Car</div>
                     <div class="project-tech-highlights">
                         Arduino, Bluetooth, GPS, I2C
+                    </div>
+                    <div class="project-media">
+                        <div class="photo-gallery">
+                            <video controls class="project-video">
+                                <source src="videos/RC.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
                     </div>
                     <div class="project-description">
                         <ul>
@@ -1236,7 +1225,6 @@
                 </div>
             </section>
             
-            <!-- Research Papers Section -->
             <section id="Publications" aria-labelledby="Publications-heading">
                 <h2 id="Publications-heading">Publications</h2>
                 
@@ -1258,7 +1246,6 @@
                 </div>
             </section>
             
-            <!-- Patents Section -->
             <section id="Patents" aria-labelledby="Patents-heading">
                 <h2 id="Patents-heading">Patents</h2>
                 
@@ -1278,7 +1265,6 @@
                 </div>
             </section>
             
-            <!-- Contact Section -->
             <section id="Contact" aria-labelledby="Contact-heading">
                 <h2 id="Contact-heading">Get In Touch</h2>
                 <div class="contact-content">
@@ -1306,14 +1292,12 @@
         </div>
     </main>
     
-    <!-- Footer -->
     <footer role="contentinfo">
         <div class="container">
             <p>&copy; 2025 Dev Dipak Ghiya. All rights reserved. | Built with HTML5, CSS3, and JavaScript</p>
         </div>
     </footer>
     
-    <!-- JavaScript for smooth scrolling and form handling -->
     <script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
