@@ -11,7 +11,7 @@
     <meta property="og:title" content="Dev Dipak Ghiya | Robotics Engineer Portfolio">
     <meta property="og:description" content="Professional portfolio showcasing robotics engineering skills, research experience, and projects. Graduate student in Robotics at Johns Hopkins University.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourname.com">
+    <meta property="og:url" content="https://dghiya.github.io/Portfolio/">
     
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Dev Dipak Ghiya | Robotics Engineer Portfolio">
@@ -879,18 +879,17 @@
                 <div class="experience-item">
                     <div class="job-title">Graduate Researcher</div>
                     <div class="company">Sensing, Manipulation, and Real-Time Systems Research Laboratory, Johns Hopkins University</div>
-                    <div class="duration">January 2025 - Present </div>
+                    <div class="duration">Jan 2026 – May 2026</div>
                     <div class="job-description">
                         <ul>
-                            <li>Cross-Platform Teleoperation Architecture: Engineering a custom, low-latency TCP bridge between 
-                                Unity and ROS 2, streaming real-time Gazebo camera feeds directly into a Meta Quest 3S spatial 
-                                interface.
-                            </li>
-                            <li>
-                                Real-Time Inverse Kinematics Control: Developing a C++ MoveIt Servo node that translates 
-                                continuous 6-DOF human hand coordinates into  velocity-driven joint commands for 
-                                a UR5 industrial robot arm.
-                            </li>
+                            <li>Built ROS2-Unity teleoperation pipeline over TCP/IP achieving 25ms 
+                                latency for real-time 6-DOF UR5e control via Meta Quest 3S</li>
+
+                            <li>Streamed 3 synchronized JPEG-compressed camera feeds into VR headset, 
+                            enabling first-person remote teleoperation of simulated lab environment</li>
+
+                            <li>Implemented MoveIt2 IK node translating 6-DOF hand poses into Robotiq 
+                            85 gripper commands, throttling peak velocity to 0.04 m/s for safety</li>
                         </ul>
                     </div>
                 </div>
@@ -899,7 +898,7 @@
                 <div class="experience-item">
                     <div class="job-title">Graduate Research Assistant</div>
                     <div class="company">Advanced Medical Instrumentation and Robotics Research Laboratory, Johns Hopkins University</div>
-                    <div class="duration">November 2024 - January 2025 </div>
+                    <div class="duration">Nov 2024 - Jan 2026 </div>
                     <div class="job-description">
                         <ul>
                             <li>In my role as a Graduate Research Assistant at the AMIRo Lab, I am developing a high-precision mechanical 
@@ -967,8 +966,7 @@
                     <div class="job-description">
                         <ul>
                             <li>
-                                Led 18-member team as captain designing formula student race car, driving a
-                                erodynamic development achieving 150kg downforce at 100km/h through CFD optimization in
+                                Led 18-member team as captain designing formula student race car, driving aerodynamic development achieving 150kg downforce at 100km/h through CFD optimization in
                                  OpenFOAM with k-ω SST turbulence modeling. Designed lightweight tubular chassis in Siemens 
                                  NX achieving torsional rigidity of 1500 Nm/deg while maintaining optimal weight distribution.
                             </li>
@@ -982,18 +980,7 @@
                     </div>
                 </div>
                 
-                <div class="experience-item">
-                    <div class="job-title">Trainee Engineer</div>
-                    <div class="company">Hema Laboratories Pvt. Ltd</div>
-                    <div class="duration">May 2022 – Jul 2022</div>
-                    <div class="project-tech-highlights">Dehradun, India</div>
-                    <div class="job-description">
-                        <ul>
-                            <li>Operated and monitored 3 automated manufacturing processes for pharmaceutical products.</li>
-                            <li>Executed inspection tests on Active Pharmaceutical Ingredients (APIs) using High-Performance Liquid Chromatography (HPLC).</li>
-                        </ul>
-                    </div>
-                </div>
+                
             </section>
             
             <section id="projects" aria-labelledby="projects-heading">
@@ -1119,6 +1106,49 @@
                     </div>
                 </div>
                 
+
+                <div class="project-item">
+                    <div class="project-title">
+                        Autonomous Mobile Manipulation System
+                        <a href="https://dghiya.github.io/TB4_Project/" target="_blank" 
+                           rel="noopener noreferrer" class="doc-link" style="font-size:0.85rem; margin-left:1rem;">
+                           Live Demo ↗
+                        </a>
+                    </div>
+                    <div class="project-tech-highlights">
+                        ROS2, Nav2, MoveIt2, OAK-D, Gemini VLM, ArUco, TurtleBot4, OpenManipulator-X
+                    </div>
+                    <div class="project-description">
+                        <ul>
+                            <li>Deployed end-to-end ROS2 Nav2 mobile manipulation pipeline on 
+                            TurtleBot4 for autonomous object retrieval in unstructured environments</li>
+                            <li>Fused OAK-D depth camera, Gemini vision-language model, and ArUco 
+                            marker detection to localize and identify objects in 3D space</li>
+                            <li>Engineered visual servoing via ArUco detection, minimizing mobile 
+                            base alignment error to 5mm before grasp execution</li>
+                            <li>Synchronized 4-DOF OpenManipulator-X arm for collision-free object 
+                            grasping using MoveIt2 motion planning</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-title">Position-Based Visual Servoing (PBVS) Controller</div>
+                    <div class="project-tech-highlights">
+                        ROS2, MoveIt2, RealSense, Orocos KDL, C++, UR5e
+                    </div>
+                    <div class="project-description">
+                        <ul>
+                            <li>Engineered a 100Hz ROS2 vision-based controller for real-time 
+                            6-DOF robotic arm tracking using live camera feedback</li>
+                            <li>Deployed on physical UR5e, tuning RealSense depth data to achieve 
+                            5mm/s jitter-free end-effector motion</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
                 <div class="project-item">
                     <div class="project-title">Semantic SLAM - Detecting Objects in 3D Map</div>
                     <div class="project-tech-highlights">
@@ -1314,7 +1344,7 @@
     
     <footer role="contentinfo">
         <div class="container">
-            <p>&copy; 2025 Dev Dipak Ghiya. All rights reserved. | Built with HTML5, CSS3, and JavaScript</p>
+            <p>&copy; 2026 Dev Dipak Ghiya. All rights reserved. | Built with HTML5, CSS3, and JavaScript</p>
         </div>
     </footer>
     
