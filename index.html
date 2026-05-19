@@ -901,18 +901,14 @@
                     <div class="duration">Nov 2024 - Jan 2026 </div>
                     <div class="job-description">
                         <ul>
-                            <li>In my role as a Graduate Research Assistant at the AMIRo Lab, I am developing a high-precision mechanical 
-                                positioning system for small animal FLASH X-ray therapy. I am implementing on a novel dual-arm robotic configuration 
-                                that uses 3D-printed collimator assemblies. I have successfully validated the system's alignment, achieving 20-40 
-                                micrometer accuracy as measured by a Keyence 3D surface profiler
-                            </li>
-                            <li>
-                                I have designed a multi-modal mouse bed using Creo Parametric, specified for 80mm bi-directional translation, 
-                                90-degree rotation, and a 250g load capacity (with < 0.4mm deflection). This system integrates 
-                                hybrid -  manual or electronic control, variable collimator patterns for targeted tumor ablation, and multi-nozzle 
-                                anesthesia delivery. The resulting modular platform is compatible with both micro-CT imaging and FLASH therapy 
-                                systems, which enables a seamless workflow for image-guided preclinical radiotherapy research
-                            </li>
+                            <li>Developing a high-precision robotic positioning system for small animal 
+                                FLASH X-ray therapy, using a dual-arm configuration with 3D-printed 
+                                collimator assemblies, validated to 20-40 micron alignment accuracy via 
+                                Keyence 3D surface profilometer</li>
+                                
+                            <li>Designed a modular multi-modal mouse bed in Creo Parametric supporting 
+                            80mm translation, 90° rotation, and 250g load with under 0.4mm deflection, 
+                            compatible with both micro-CT imaging and FLASH therapy workflows</li>
                         </ul>
                     </div>
                 </div>
@@ -965,17 +961,20 @@
                     </div>
                     <div class="job-description">
                         <ul>
-                            <li>
-                                Led 18-member team as captain designing formula student race car, driving aerodynamic development achieving 150kg downforce at 100km/h through CFD optimization in
-                                 OpenFOAM with k-ω SST turbulence modeling. Designed lightweight tubular chassis in Siemens 
-                                 NX achieving torsional rigidity of 1500 Nm/deg while maintaining optimal weight distribution.
-                            </li>
-                            <li>
-                                Optimized suspension kinematics in LOTUS for 2° camber gain, <0.5° bump steer, 45/55 
-                                weight distribution, 1.5Hz ride frequency, and 2.2Hz roll frequency. Validated vehicle 
-                                dynamics through 60 km/h testing achieving 1.4g lateral acceleration, 12m turning radius, 
-                                and 0.8g braking deceleration.
-                            </li>
+                            <li>Led 18-member team through end-to-end development of a Formula Student 
+                                race car, owning vehicle design, aerodynamics, and dynamics from concept 
+                                to competition</li>
+                                
+                            <li>Designed tubular chassis in Siemens NX achieving 1500 Nm/deg torsional 
+                            rigidity, and validated 150kg downforce at 100km/h via CFD simulation 
+                            in OpenFOAM</li>
+                            
+                            <li>Optimized suspension geometry and validated vehicle dynamics through 
+                            physical testing, achieving 1.4g lateral acceleration and 0.8g braking 
+                            deceleration</li>
+                            
+                            <li>Programmed Arduino finite-state machine in C for real-time gear, speed, 
+                            and telemetry diagnostics</li>
                         </ul>
                     </div>
                 </div>
@@ -985,6 +984,47 @@
             
             <section id="projects" aria-labelledby="projects-heading">
                 <h2 id="projects-heading">Projects</h2>
+
+
+                <div class="project-item">
+                    <div class="project-title">
+                        Autonomous Mobile Manipulation System
+                        <a href="https://dghiya.github.io/TB4_Project/" target="_blank" 
+                           rel="noopener noreferrer" class="doc-link" style="font-size:0.85rem; margin-left:1rem;">
+                           Live Demo ↗
+                        </a>
+                    </div>
+                    <div class="project-tech-highlights">
+                        ROS2, Nav2, MoveIt2, OAK-D, Gemini VLM, ArUco, TurtleBot4, OpenManipulator-X
+                    </div>
+                    <div class="project-description">
+                        <ul>
+                            <li>Deployed end-to-end ROS2 Nav2 mobile manipulation pipeline on 
+                            TurtleBot4 for autonomous object retrieval in unstructured environments</li>
+                            <li>Fused OAK-D depth camera, Gemini vision-language model, and ArUco 
+                            marker detection to localize and identify objects in 3D space</li>
+                            <li>Engineered visual servoing via ArUco detection, minimizing mobile 
+                            base alignment error to 5mm before grasp execution</li>
+                            <li>Synchronized 4-DOF OpenManipulator-X arm for collision-free object 
+                            grasping using MoveIt2 motion planning</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-title">Position-Based Visual Servoing (PBVS) Controller</div>
+                    <div class="project-tech-highlights">
+                        ROS2, MoveIt2, RealSense, Orocos KDL, C++, UR5e
+                    </div>
+                    <div class="project-description">
+                        <ul>
+                            <li>Engineered a 100Hz ROS2 vision-based controller for real-time 
+                            6-DOF robotic arm tracking using live camera feedback</li>
+                            <li>Deployed on physical UR5e, tuning RealSense depth data to achieve 
+                            5mm/s jitter-free end-effector motion</li>
+                        </ul>
+                    </div>
+                </div>
 
                 <div class="project-item">
                     <div class="project-title">Deep Reinforcement Learning for Contact-Rich Manipulation</div>
@@ -1083,6 +1123,10 @@
                     <div class="project-tech-highlights">
                         UR5e, MATLAB, Inverse Kinematics, Analytical IK, Resolved-Rate, Jacobian Transpose
                     </div>
+                    <div class="project-doc-link">
+                        <a href="docs/FinalProject_RDKDC.pdf" target="_blank" class="doc-link">
+                        View Project Documentation (PDF)</a>
+                    </div>
                     <div class="project-media">
                         <div class="photo-gallery">
                             <img src="images/RDKDC.png" alt="UR5 Manipulation project" class="project-image">
@@ -1101,51 +1145,10 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="project-doc-link">
-                        <a href="docs/FinalProject_RDKDC.pdf" target="_blank" class="doc-link">View Project Documentation (PDF)</a>
-                    </div>
                 </div>
                 
 
-                <div class="project-item">
-                    <div class="project-title">
-                        Autonomous Mobile Manipulation System
-                        <a href="https://dghiya.github.io/TB4_Project/" target="_blank" 
-                           rel="noopener noreferrer" class="doc-link" style="font-size:0.85rem; margin-left:1rem;">
-                           Live Demo ↗
-                        </a>
-                    </div>
-                    <div class="project-tech-highlights">
-                        ROS2, Nav2, MoveIt2, OAK-D, Gemini VLM, ArUco, TurtleBot4, OpenManipulator-X
-                    </div>
-                    <div class="project-description">
-                        <ul>
-                            <li>Deployed end-to-end ROS2 Nav2 mobile manipulation pipeline on 
-                            TurtleBot4 for autonomous object retrieval in unstructured environments</li>
-                            <li>Fused OAK-D depth camera, Gemini vision-language model, and ArUco 
-                            marker detection to localize and identify objects in 3D space</li>
-                            <li>Engineered visual servoing via ArUco detection, minimizing mobile 
-                            base alignment error to 5mm before grasp execution</li>
-                            <li>Synchronized 4-DOF OpenManipulator-X arm for collision-free object 
-                            grasping using MoveIt2 motion planning</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="project-item">
-                    <div class="project-title">Position-Based Visual Servoing (PBVS) Controller</div>
-                    <div class="project-tech-highlights">
-                        ROS2, MoveIt2, RealSense, Orocos KDL, C++, UR5e
-                    </div>
-                    <div class="project-description">
-                        <ul>
-                            <li>Engineered a 100Hz ROS2 vision-based controller for real-time 
-                            6-DOF robotic arm tracking using live camera feedback</li>
-                            <li>Deployed on physical UR5e, tuning RealSense depth data to achieve 
-                            5mm/s jitter-free end-effector motion</li>
-                        </ul>
-                    </div>
-                </div>
+
 
 
 
@@ -1153,6 +1156,10 @@
                     <div class="project-title">Semantic SLAM - Detecting Objects in 3D Map</div>
                     <div class="project-tech-highlights">
                         ORB-SLAM3, YOLOv7, OpenCV, ROS , Raspberry Pi 4, Camera Calibration
+                    </div>
+                    <div class="project-doc-link">
+                        <a href="docs/CV_Final_Writeup.pdf" target="_blank" class="doc-link">
+                        View Project Documentation (PDF)</a>
                     </div>
                     <div class="project-media">
                         <div class="photo-gallery">
@@ -1172,9 +1179,6 @@
                                   bag files for consistent input for testing and analysis
                             </li>
                         </ul>
-                    </div>
-                    <div class="project-doc-link">
-                        <a href="docs/CV_Final_Writeup.pdf" target="_blank" class="doc-link">View Project Documentation (PDF)</a>
                     </div>
                 </div>
                 
