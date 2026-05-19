@@ -190,6 +190,41 @@
             border-radius: 50%;
         }
         
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.25rem 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .item-header-left {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .item-header .job-title,
+        .item-header .project-title {
+            margin-bottom: 0;
+        }
+        
+        .item-header .duration {
+            margin-bottom: 0;
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+        
+        .inline-demo-link {
+            font-size: 0.85rem;
+            margin-left: 0;
+            padding: 0.35rem 0.75rem;
+        }
+        
         .job-title {
             font-size: 1.3rem;
             font-weight: 600;
@@ -291,34 +326,45 @@
         .education-content {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 1rem;
         }
         
         .education-item {
             background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
+            padding: 0.85rem 1rem;
+            border-radius: 6px;
+            border-left: 3px solid #667eea;
         }
         
-        .education-item h3 {
+        .education-item .item-header h3 {
             color: #667eea;
-            margin-bottom: 0.5rem;
+            font-size: 1.15rem;
+            margin: 0;
         }
         
-        .institution {
+        .education-item .institution {
             font-weight: 600;
             color: #333;
-            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
         }
         
-        .duration, .advisor, .gpa {
+        .education-meta {
             color: #666;
-            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            margin-bottom: 0.35rem;
         }
         
-        .coursework {
-            margin-top: 1rem;
+        .education-meta .advisor,
+        .education-meta .gpa {
+            margin-bottom: 0;
+        }
+        
+        .education-item .coursework {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            line-height: 1.45;
+            color: #555;
         }
         
         /* Projects Section - Horizontal Layout */
@@ -663,6 +709,15 @@
             .project-video {
                 max-height: 250px;
             }
+            
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .item-header .duration {
+                white-space: normal;
+            }
         }
         
         @media (max-width: 480px) {
@@ -786,10 +841,12 @@
                 <h2 id="education-heading">Education</h2>
                 <div class="education-content">
                     <div class="education-item">
-                        <h3>Master of Science in Robotics</h3>
+                        <div class="item-header">
+                            <h3>Master of Science in Robotics</h3>
+                            <div class="duration">Aug 2024 – May 2026</div>
+                        </div>
                         <div class="institution">Johns Hopkins University</div>
-                        <div class="duration">Aug 2024 - May 2026</div>
-                        <div class="advisor">Advisor: Dr. Peter Kazanzides</div>
+                        <div class="education-meta">Advisor: Dr. Peter Kazanzides</div>
                         <div class="coursework">
                             <strong>Coursework:</strong> Robot System Programming, Reinforcement Learning, Algorithm for Sensor-based Robots, Trajectory 
                             Design for Space Systems, Machine Learning: Deep Learning, Computer Vision, Robot Sensors and Actuators
@@ -797,10 +854,12 @@
                     </div>
                     
                     <div class="education-item">
-                        <h3>Bachelor of Technology in Mechanical Engineering</h3>
+                        <div class="item-header">
+                            <h3>Bachelor of Technology in Mechanical Engineering</h3>
+                            <div class="duration">May 2024</div>
+                        </div>
                         <div class="institution">Pandit Deendayal Energy University (PDEU), India</div>
-                        <div class="duration">May 2024</div>
-                        <div class="gpa">GPA: 3.95/4.0</div>
+                        <div class="education-meta">GPA: 3.95/4.0</div>
                         <div class="coursework">
                             <strong>Coursework:</strong> Computer Aided Design, Control System , Design and Kinematics of Machines, Dynamics of Machines, 
                             Semi-conductor manufacturing
@@ -877,9 +936,14 @@
                 <h2 id="experience-heading">Experience</h2>
                 
                 <div class="experience-item">
-                    <div class="job-title">Graduate Researcher</div>
+                    <div class="item-header">
+                        <div class="item-header-left">
+                            <div class="job-title">Graduate Researcher</div>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="doc-link inline-demo-link">Live Demo ↗</a>
+                        </div>
+                        <div class="duration">Jan 2026 – May 2026</div>
+                    </div>
                     <div class="company">Sensing, Manipulation, and Real-Time Systems Research Laboratory, Johns Hopkins University</div>
-                    <div class="duration">Jan 2026 – May 2026</div>
                     <div class="job-description">
                         <ul>
                             <li>Built ROS2-Unity teleoperation pipeline over TCP/IP achieving 25ms 
@@ -896,9 +960,14 @@
 
 
                 <div class="experience-item">
-                    <div class="job-title">Graduate Research Assistant</div>
+                    <div class="item-header">
+                        <div class="item-header-left">
+                            <div class="job-title">Graduate Research Assistant</div>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="doc-link inline-demo-link">Live Demo ↗</a>
+                        </div>
+                        <div class="duration">Nov 2024 – Jan 2026</div>
+                    </div>
                     <div class="company">Advanced Medical Instrumentation and Robotics Research Laboratory, Johns Hopkins University</div>
-                    <div class="duration">Nov 2024 - Jan 2026 </div>
                     <div class="job-description">
                         <ul>
                             <li>Developing a high-precision robotic positioning system for small animal 
@@ -915,9 +984,11 @@
                     
                 
                 <div class="experience-item">
-                    <div class="job-title">Research Intern</div>
+                    <div class="item-header">
+                        <div class="job-title">Research Intern</div>
+                        <div class="duration">May 2023 – July 2023</div>
+                    </div>
                     <div class="company">Indian Institute of Technology – Madras</div>
-                    <div class="duration">May 2023 - July 2023</div>
                     <div class="project-tech-highlights">
                         SolidWorks, Raspberry Pi, MATLAB, ROS2, C++
                     </div>
@@ -944,9 +1015,11 @@
                 </div>
                 
                 <div class="experience-item">
-                    <div class="job-title">Formula Student Team Captain - Head of Vehicle Design & Dynamics</div>
+                    <div class="item-header">
+                        <div class="job-title">Formula Student Team Captain - Head of Vehicle Design & Dynamics</div>
+                        <div class="duration">May 2022 – Aug 2023</div>
+                    </div>
                     <div class="company">Pandit Deendayal Energy University</div>
-                    <div class="duration">May 2022 - Aug 2023 </div>
                     <div class="project-tech-highlights">
                         Siemens NX, ANSYS, OPENFOAM, MATLAB, Team Building, Team Management
                     </div>
@@ -987,12 +1060,12 @@
 
 
                 <div class="project-item">
-                    <div class="project-title">
-                        Autonomous Mobile Manipulation System
-                        <a href="https://dghiya.github.io/TB4_Project/" target="_blank" 
-                           rel="noopener noreferrer" class="doc-link" style="font-size:0.85rem; margin-left:1rem;">
-                           Live Demo ↗
-                        </a>
+                    <div class="item-header">
+                        <div class="item-header-left">
+                            <div class="project-title">Autonomous Mobile Manipulation System</div>
+                            <a href="https://dghiya.github.io/TB4_Project/" target="_blank" 
+                               rel="noopener noreferrer" class="doc-link inline-demo-link">Live Demo ↗</a>
+                        </div>
                     </div>
                     <div class="project-tech-highlights">
                         ROS2, Nav2, MoveIt2, OAK-D, Gemini VLM, ArUco, TurtleBot4, OpenManipulator-X
@@ -1027,7 +1100,12 @@
                 </div>
 
                 <div class="project-item">
-                    <div class="project-title">Deep Reinforcement Learning for Contact-Rich Manipulation</div>
+                    <div class="item-header">
+                        <div class="item-header-left">
+                            <div class="project-title">Deep Reinforcement Learning for Contact-Rich Manipulation</div>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="doc-link inline-demo-link">Live Demo ↗</a>
+                        </div>
+                    </div>
                     <div class="project-tech-highlights">
                         Stable-Baselines3, MuJoCo, Jax, SAC, HER, PyTorch, Robosuite
                     </div>
@@ -1054,7 +1132,12 @@
 
 
                 <div class="project-item">
-                    <div class="project-title">Trajectory Optimization and Control for Free-Floating Space Manipulators</div>
+                    <div class="item-header">
+                        <div class="item-header-left">
+                            <div class="project-title">Trajectory Optimization and Control for Free-Floating Space Manipulators</div>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="doc-link inline-demo-link">Live Demo ↗</a>
+                        </div>
+                    </div>
                     <div class="project-tech-highlights">
                         SPART, MuJoCo, JAX, skrl, Python
                     </div>
